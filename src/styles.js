@@ -11,7 +11,6 @@ const Container = styled.div`
 `;
 
 const Content = styled.div`
-  /* background: red; */
   width: 100%;
   height: 100%;
 `;

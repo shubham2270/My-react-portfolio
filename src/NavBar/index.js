@@ -7,27 +7,27 @@ import { ReactComponent as SkillsLogo } from "../Assets/Icons/skills.svg";
 import { ReactComponent as WorkLogo } from "../Assets/Icons/work.svg";
 import { ReactComponent as EmailLogo } from "../Assets/Icons/email.svg";
 
-import { Nav, NavIconsWrapper } from "./styles";
+import { Nav, NavIconsWrapper, StyledLink } from "./styles";
 
 const NavBar = () => {
   return (
     <Nav>
       <NavIconsWrapper>
-        <Link to="/">
+        <StyledLink exact to="/">
           <HomeLogo />
-        </Link>
-        <Link to="/about">
+        </StyledLink>
+        <StyledLink to="/about">
           <AboutLogo />
-        </Link>
-        <Link to="/skills">
+        </StyledLink>
+        <StyledLink to="/skills">
           <SkillsLogo />
-        </Link>
-        <Link to="/work">
+        </StyledLink>
+        <StyledLink to="/work">
           <WorkLogo />
-        </Link>
-        <Link to="/contact">
+        </StyledLink>
+        <StyledLink to="/contact">
           <EmailLogo />
-        </Link>
+        </StyledLink>
       </NavIconsWrapper>
     </Nav>
   );

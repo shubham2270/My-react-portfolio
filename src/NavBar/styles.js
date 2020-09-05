@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 import * as colors from "../Constants/colors";
 
@@ -22,4 +23,12 @@ const NavIconsWrapper = styled.div`
   }
 `;
 
-export { Nav, NavIconsWrapper };
+const StyledLink = styled(NavLink)`
+  &.active {
+    > svg {
+      fill: ${colors.white};
+    }
+  }
+`;
+
+export { Nav, NavIconsWrapper, StyledLink };

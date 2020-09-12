@@ -1,7 +1,8 @@
 import React from "react";
 
 import MainContainer from "../styles";
-import { Heading, Content, AboutWrapper, Resume } from "./styles";
+import { Heading, Content, AboutWrapper } from "./styles";
+import Button from "../../Components/Button";
 
 const About = () => {
   return (
@@ -18,12 +19,10 @@ const About = () => {
           also keep learning new technologies.
         </Content>{" "}
         <br /> <br />
-        <Resume
-          target="_blank"
-          href="https://drive.google.com/open?id=1qjMf_Umeb7Hd7AgYAd5BHP9_-CtyPqwU"
-        >
-          Resume
-        </Resume>
+        <Button
+          link="https://drive.google.com/open?id=1qjMf_Umeb7Hd7AgYAd5BHP9_-CtyPqwU"
+          name="Resume"
+        />
       </AboutWrapper>
     </MainContainer>
   );

@@ -4,7 +4,7 @@ import { ReactComponent as HomeLogo } from "../Assets/Icons/home.svg";
 import { ReactComponent as AboutLogo } from "../Assets/Icons/about.svg";
 import { ReactComponent as SkillsLogo } from "../Assets/Icons/skills.svg";
 import { ReactComponent as WorkLogo } from "../Assets/Icons/work.svg";
-import { ReactComponent as EmailLogo } from "../Assets/Icons/email.svg";
+import { ReactComponent as EmailLogo } from "../Assets/Icons/social/email.svg";
 
 import { Nav, NavIconsWrapper, StyledLink } from "./styles";
 

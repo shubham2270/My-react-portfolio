@@ -22,14 +22,4 @@ const AboutWrapper = styled.div`
   width: 40%;
 `;
 
-const Resume = styled.a`
-  background: ${color.green};
-  width: 80px;
-  color: ${color.dark};
-  text-decoration: none;
-  font-family: ${fonts.secondary};
-  padding: 9px 12px;
-  margin-top: 10em;
-`;
-
-export { Heading, Content, AboutWrapper, Resume };
+export { Heading, Content, AboutWrapper };

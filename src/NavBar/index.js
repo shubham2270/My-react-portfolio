@@ -1,5 +1,4 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import { ReactComponent as HomeLogo } from "../Assets/Icons/home.svg";
 import { ReactComponent as AboutLogo } from "../Assets/Icons/about.svg";

@@ -6,7 +6,7 @@ import * as colors from "../Constants/colors";
 const Nav = styled.div`
   display: grid;
   place-items: center;
-  width: 60px;
+  width: 5vw;
   height: 100%;
   background: ${colors.grey};
 `;

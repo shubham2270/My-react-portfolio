@@ -15,6 +15,9 @@ const StyledList = styled.ul`
   justify-content: flex-start;
   height: 250px;
   padding-left: 16px;
+  > div {
+    cursor: pointer;
+  }
   > li {
     &:nth-child(1) {
       margin-top: 0px;
@@ -43,9 +46,12 @@ const SubWrapper = styled.div`
 `;
 
 const ProjectImage = styled.div`
-  background: pink;
   width: 100%;
   height: 175px;
+  overflow: hidden;
+  > img {
+    width: 110%;
+  }
 `;
 
 const ButtonWrapper = styled.div`

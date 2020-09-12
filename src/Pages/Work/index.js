@@ -3,6 +3,8 @@ import React from "react";
 import MainContainer from "../styles";
 import { Content } from "../About/styles";
 import Button from "../../Components/Button";
+import { projectData } from "../../Assets/Data/projectData";
+
 import {
   Heading,
   StyledList,
@@ -22,12 +24,18 @@ const Work = () => {
           <Heading>Some of my personal projects for practic & fun</Heading>
           <Content>
             <StyledList>
-              <li>Book Search</li>
-              <li>Smart Brain</li>
-              <li>RGB lights</li>
-              <li>Cat pics search</li>
-              <li>RealEstate website</li>
-              <li>Astro World</li>
+              {projectData.map((el) => {
+                return (
+                  <div key={el.id}>
+                    {console.log("el.image", el.image)}
+                    <li key={el.id}>{el.name}</li>
+                    {/* <img
+                      src={require(`../../Assets/projectImages/webprojects/${el.image}`)}
+                      alt={el.alt}
+                    /> */}
+                  </div>
+                );
+              })}
             </StyledList>
           </Content>
           <ProjectWrapper>

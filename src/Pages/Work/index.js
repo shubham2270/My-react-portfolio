@@ -4,6 +4,7 @@ import MainContainer from "../styles";
 import { Content } from "../About/styles";
 import Button from "../../Components/Button";
 import { projectData } from "../../Assets/Data/projectData";
+import { ReactComponent as VectorArt } from "../../Assets/Vector/webproject.svg";
 
 import {
   Heading,
@@ -14,6 +15,8 @@ import {
   ProjectImage,
   ProjectInfo,
   ButtonWrapper,
+  WebProjectVector,
+  ListWrapper,
 } from "./styles";
 
 const Work = () => {
@@ -37,17 +40,18 @@ const Work = () => {
             <StyledList>
               {projectData.map((project) => {
                 return (
-                  <div
+                  <ListWrapper
                     key={project.id}
                     onClick={() => findSelectedProject(project.id)}
+                    active={project.id === currentProject?.id}
                   >
                     <li key={project.id}>{project.name}</li>
-                  </div>
+                  </ListWrapper>
                 );
               })}
             </StyledList>
           </Content>
-          {currentProject && (
+          {currentProject ? (
             <ProjectWrapper>
               <ProjectImage>
                 <img
@@ -61,6 +65,10 @@ const Work = () => {
                 <Button link={github} name="Github" />
               </ButtonWrapper>
             </ProjectWrapper>
+          ) : (
+            <WebProjectVector>
+              <VectorArt />
+            </WebProjectVector>
           )}
         </Wrapper>
       </SubWrapper>

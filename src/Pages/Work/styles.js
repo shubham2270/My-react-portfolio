@@ -1,9 +1,7 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { Heading as aboutHeading } from "../About/styles";
 import * as color from "../../Constants/colors";
-import * as fonts from "../../Constants/fonts";
-import * as size from "../../Constants/size";
 
 const Heading = styled(aboutHeading)`
   line-height: 4rem;
@@ -15,9 +13,7 @@ const StyledList = styled.ul`
   justify-content: flex-start;
   height: 250px;
   padding-left: 16px;
-  > div {
-    cursor: pointer;
-  }
+
   > li {
     &:nth-child(1) {
       margin-top: 0px;
@@ -26,6 +22,17 @@ const StyledList = styled.ul`
     margin-top: 20px;
     list-style-type: square;
   }
+`;
+
+const ListWrapper = styled.div`
+  cursor: pointer;
+  ${(props) =>
+    props.active &&
+    css`
+      font-weight: bold;
+      font-size: 1.3rem;
+      color: ${color.green};
+    `};
 `;
 
 const Wrapper = styled.div`
@@ -43,6 +50,7 @@ const ProjectWrapper = styled.div`
 
 const SubWrapper = styled.div`
   position: relative;
+  top: -2em;
 `;
 
 const ProjectImage = styled.div`
@@ -69,6 +77,16 @@ const ProjectInfo = styled.div`
   overflow: auto;
 `;
 
+const WebProjectVector = styled.div`
+  position: absolute;
+  right: 7em;
+  top: 8em;
+  > svg {
+    width: 500px;
+    height: 50%;
+  }
+`;
+
 export {
   Heading,
   StyledList,
@@ -78,4 +96,6 @@ export {
   ProjectImage,
   ButtonWrapper,
   ProjectInfo,
+  WebProjectVector,
+  ListWrapper,
 };

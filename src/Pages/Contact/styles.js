@@ -32,16 +32,15 @@ const VectorArtWrapper = styled.div`
   }
 `;
 
+const SocialLinks = styled.div`
+  font-size: 30px;
+  color: ${colors.grey};
+`;
+
 const SubWrapper = styled.div`
   display: grid;
   height: 80vh;
   width: 80vw;
-`;
-
-const SocialLinks = styled.div`
-  font-size: 20px;
-  color: ${colors.grey};
-  padding-left: 3em;
 `;
 
 const LinkVectorWrapper = styled.div`

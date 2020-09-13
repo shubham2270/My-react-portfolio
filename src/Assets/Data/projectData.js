@@ -5,7 +5,7 @@ export const projectData = [
     alt: "book search",
     name: "Book Search",
     desc:
-      "A full-stack web application for searching Books fetched using Google books API, It has a UI built with React, a RESTful Node/Express server and a PostgreSQL database. It lets users have their own accounts through the Sign-Up and Sign-In features.",
+      "A full-stack web application for searching Books fetched using Google books API, It has a UI built with React, a RESTful Node/Express server and a PostgreSQL database. It lets users have their own accounts through the Sign-Up and Sign-In features. NOTE: you can login app: username: teddy@gmail.com password: teddy",
     url: "https://shubham2270.github.io/book-store-app/",
     github: "https://github.com/shubham2270/book-store-app",
   },

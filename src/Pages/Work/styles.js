@@ -59,11 +59,14 @@ const ButtonWrapper = styled.div`
   width: 100%;
   justify-content: space-around;
   align-items: center;
+  padding-top: 10px;
 `;
 
 const ProjectInfo = styled.div`
   padding: 16px;
   line-height: 1.6rem;
+  max-height: 150px;
+  overflow: auto;
 `;
 
 export {

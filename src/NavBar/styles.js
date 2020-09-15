@@ -19,7 +19,9 @@ const NavIconsWrapper = styled.div`
   > a > svg {
     width: 28px;
     fill: ${colors.green};
-    cursor: pointer;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='27' height='32' viewport='0 0 100 100' style='fill:black;font-size:16px;'><text y='50%'>💡</text></svg>")
+        16 0,
+      auto;
   }
 `;
 

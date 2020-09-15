@@ -9,6 +9,7 @@ import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Skills from "./Pages/Skills";
 import Work from "./Pages/Work";
+const cursor = require("./cursor.png");
 
 const App = () => {
   return (

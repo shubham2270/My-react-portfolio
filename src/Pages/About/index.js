@@ -1,15 +1,20 @@
 import React from "react";
+import { useTrail, animated } from "react-spring";
 
 import MainContainer from "../styles";
 import { Heading, Content, AboutWrapper } from "./styles";
 import Button from "../../Components/Button";
 
 const About = () => {
+  const trail = useTrail(5, { opacity: 1 });
   return (
     <MainContainer>
       <AboutWrapper>
         <Heading>About me</Heading>
         <Content>
+          {trail.map((props) => (
+            <animated.div style={props} />
+          ))}{" "}
           I am a self-taught developer from India. My goal is to build
           full-stack websites and web applications using modern web
           technologies.

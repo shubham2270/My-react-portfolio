@@ -14,6 +14,7 @@ const Intro = styled(animated.div)`
   color: ${color.grey};
   font-family: ${fonts.primary};
   line-height: 4.5rem;
+  display: flex;
 `;
 
 const Name = styled(animated.div)`
@@ -30,4 +31,8 @@ const SecondaryName = styled(animated.div)`
   line-height: 1rem;
 `;
 
-export { NameContainer, Intro, Name, SecondaryName };
+const AnimatedSpan = styled(animated.span)`
+  display: block;
+`;
+
+export { NameContainer, Intro, Name, SecondaryName, AnimatedSpan };

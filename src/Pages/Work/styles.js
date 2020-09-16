@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 
 import { Heading as aboutHeading } from "../About/styles";
 import * as color from "../../Constants/colors";
+import hand from "../../Assets/cursors/hand.png";
 
 const Heading = styled(aboutHeading)`
   line-height: 4rem;
@@ -18,14 +19,14 @@ const StyledList = styled.ul`
     &:nth-child(1) {
       margin-top: 0px;
     }
-    cursor: pointer;
+    cursor: url(${hand}), auto;
     margin-top: 20px;
     list-style-type: square;
   }
 `;
 
 const ListWrapper = styled.div`
-  cursor: pointer;
+  cursor: url(${hand}), auto;
   ${(props) =>
     props.active &&
     css`

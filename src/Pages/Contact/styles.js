@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import { Heading as aboutHeading } from "../About/styles";
+import hand from "../../Assets/cursors/hand.png";
 
 import * as colors from "../../Constants/colors";
 
@@ -13,6 +14,9 @@ const SocialIconWrapper = styled.div`
   align-items: center;
   width: 400px;
   justify-content: space-around;
+  > a {
+    cursor: url(${hand}), auto;
+  }
   > a > svg > g > g {
     stroke: ${colors.green};
   }

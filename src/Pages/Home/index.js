@@ -2,7 +2,7 @@
 import React from "react";
 
 import MainContainer from "../styles";
-import useAnimations from "../../animations/useAnimations";
+import useAnimations from "../../animations/home/useAnimations";
 import {
   NameContainer,
   Intro,

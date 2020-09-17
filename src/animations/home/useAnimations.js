@@ -3,7 +3,7 @@ import { useSpring } from "react-spring";
 import { useDencrypt } from "use-dencrypt-effect";
 import WAVES from "vanta/dist/vanta.waves.min";
 
-import * as color from "../Constants/colors";
+import * as color from "../../Constants/colors";
 
 const useAnimations = () => {
   const [secondAnimate, setSecondAnimate] = useState(false);

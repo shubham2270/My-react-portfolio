@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { animated } from "react-spring";
 
 import { Heading as aboutHeading } from "../About/styles";
 import * as color from "../../Constants/colors";
@@ -25,7 +26,7 @@ const StyledList = styled.ul`
   }
 `;
 
-const ListWrapper = styled.div`
+const ListWrapper = styled(animated.div)`
   cursor: url(${hand}), auto;
   ${(props) =>
     props.active &&

@@ -5,6 +5,7 @@ import { Content } from "../About/styles";
 import Button from "../../Components/Button";
 import { projectData } from "../../Assets/Data/projectData";
 import { ReactComponent as VectorArt } from "../../Assets/Vector/webproject.svg";
+import useAnimations from "../../animations/work/useAnimations";
 
 import {
   Heading,
@@ -20,6 +21,7 @@ import {
 } from "./styles";
 
 const Work = () => {
+  const { textZoom } = useAnimations();
   const [currentProject, setCurrentProject] = useState(null);
   const { image, desc, url, github } = currentProject || "";
 
@@ -39,11 +41,14 @@ const Work = () => {
           <Content>
             <StyledList>
               {projectData.map((project) => {
+                const active = project.id === currentProject?.id;
+                const style = active ? textZoom : {};
                 return (
                   <ListWrapper
+                    style={active ? textZoom : {}}
                     key={project.id}
                     onClick={() => findSelectedProject(project.id)}
-                    active={project.id === currentProject?.id}
+                    active={active}
                   >
                     <li key={project.id}>{project.name}</li>
                   </ListWrapper>

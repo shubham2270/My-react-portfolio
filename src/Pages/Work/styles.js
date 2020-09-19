@@ -28,6 +28,9 @@ const StyledList = styled.ul`
 
 const ListWrapper = styled(animated.div)`
   cursor: url(${hand}), auto;
+  &:hover {
+    color: ${color.green};
+  }
   ${(props) =>
     props.active &&
     css`
@@ -41,7 +44,7 @@ const Wrapper = styled.div`
   width: 60%;
 `;
 
-const ProjectWrapper = styled.div`
+const ProjectWrapper = styled(animated.div)`
   width: 384px;
   background: ${color.grey};
   position: absolute;
@@ -72,14 +75,14 @@ const ButtonWrapper = styled.div`
   padding-top: 10px;
 `;
 
-const ProjectInfo = styled.div`
+const ProjectInfo = styled(animated.div)`
   padding: 16px;
   line-height: 1.6rem;
   max-height: 150px;
   overflow: auto;
 `;
 
-const WebProjectVector = styled.div`
+const WebProjectVector = styled(animated.div)`
   position: absolute;
   right: 7em;
   top: 8em;
@@ -87,6 +90,17 @@ const WebProjectVector = styled.div`
     width: 500px;
     height: 50%;
   }
+`;
+
+const PreviousDesign = styled.div`
+  color: #fff;
+  border: 2px solid yellow;
+  padding: 8px;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  color: yellow;
+  cursor: url(${hand}), auto;
 `;
 
 export {
@@ -100,4 +114,5 @@ export {
   ProjectInfo,
   WebProjectVector,
   ListWrapper,
+  PreviousDesign,
 };

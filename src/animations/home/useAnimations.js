@@ -4,9 +4,12 @@ import { useDencrypt } from "use-dencrypt-effect";
 import WAVES from "vanta/dist/vanta.waves.min";
 
 import * as color from "../../Constants/colors";
+import useBoolean from "../../hooks/useBoolean";
 
 const useAnimations = () => {
-  const [secondAnimate, setSecondAnimate] = useState(false);
+  const { value: secondAnimate, setValue: setSecondAnimate } = useBoolean(
+    false
+  );
   const [vantaEffect, setVantaEffect] = useState(0);
 
   const values = ["Front End Developer"];

@@ -1,27 +1,23 @@
 import React, { useState } from "react";
+import { useTrail, useSpring, animated } from "react-spring";
 
 import MainContainer from "../styles";
 import { Content } from "../About/styles";
-import Button from "../../Components/Button";
 import { projectData } from "../../Assets/Data/projectData";
 import { ReactComponent as VectorArt } from "../../Assets/Vector/webproject.svg";
-import useAnimations from "../../animations/work/useAnimations";
+import ProjectList from "./ProjectList";
+import ProjectCard from "./ProjectCard";
+import PreviousDesign from "./PreviousDesign";
 
 import {
   Heading,
   StyledList,
   Wrapper,
-  ProjectWrapper,
   SubWrapper,
-  ProjectImage,
-  ProjectInfo,
-  ButtonWrapper,
   WebProjectVector,
-  ListWrapper,
 } from "./styles";
 
 const Work = () => {
-  const { textZoom } = useAnimations();
   const [currentProject, setCurrentProject] = useState(null);
   const { image, desc, url, github } = currentProject || "";
 
@@ -33,45 +29,57 @@ const Work = () => {
     setCurrentProject(selectedProject[0]);
   };
 
+  const trail = useTrail(projectData.length, {
+    from: { transform: "translateY(-50px)", opacity: 0 },
+    to: {
+      transform: "translateY(0px)",
+      height: "0px",
+      opacity: 1,
+    },
+  });
+
+  const flip = useSpring({
+    from: {
+      opacity: 0,
+      width: "0px",
+      // transform: `perspective(0px) rotateY(${180}deg)`,
+    },
+    to: {
+      opacity: 1,
+      width: "450px",
+      // transform: `perspective(600px) rotateY(${360}deg)`
+    },
+    // config: { duration: 1500 },
+    // delay: 500,
+  });
+
   return (
     <MainContainer>
+      <PreviousDesign />
       <SubWrapper>
         <Wrapper>
           <Heading>Some of my personal projects for practic & fun</Heading>
           <Content>
             <StyledList>
-              {projectData.map((project) => {
-                const active = project.id === currentProject?.id;
-                const style = active ? textZoom : {};
+              {trail.map((props, index) => {
+                const active = projectData[index].id === currentProject?.id;
                 return (
-                  <ListWrapper
-                    style={active ? textZoom : {}}
-                    key={project.id}
-                    onClick={() => findSelectedProject(project.id)}
+                  <ProjectList
+                    key={projectData[index].id}
+                    id={projectData[index].id}
                     active={active}
-                  >
-                    <li key={project.id}>{project.name}</li>
-                  </ListWrapper>
+                    styles={props}
+                    findSelectedProject={findSelectedProject}
+                    name={projectData[index].name}
+                  />
                 );
               })}
             </StyledList>
           </Content>
           {currentProject ? (
-            <ProjectWrapper>
-              <ProjectImage>
-                <img
-                  src={require(`../../Assets/projectImages/webprojects/${image}`)}
-                  alt=""
-                />
-              </ProjectImage>
-              <ProjectInfo>{desc}</ProjectInfo>
-              <ButtonWrapper>
-                <Button link={url} name="Demo" />
-                <Button link={github} name="Github" />
-              </ButtonWrapper>
-            </ProjectWrapper>
+            <ProjectCard image={image} desc={desc} url={url} github={github} />
           ) : (
-            <WebProjectVector>
+            <WebProjectVector style={flip}>
               <VectorArt />
             </WebProjectVector>
           )}

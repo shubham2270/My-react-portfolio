@@ -10,6 +10,7 @@ const Container = styled.div`
   color: white;
   display: flex;
   cursor: url(${cursor}), auto;
+  user-select: none;
 `;
 
 const Content = styled.div`

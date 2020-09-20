@@ -22,7 +22,7 @@ const PreviousDesignButton = styled.div`
   }
 `;
 
-const ContentWrapper = styled.div`
+const ContentWrapper = styled(animated.div)`
   background: ${color.dark};
   width: 20em;
   padding: 10px;
@@ -31,6 +31,7 @@ const ContentWrapper = styled.div`
   right: 1em;
   top: 3.8em;
   z-index: 1;
+  overflow: hidden;
   > a {
     &:nth-child(3) {
       padding-top: 12px;

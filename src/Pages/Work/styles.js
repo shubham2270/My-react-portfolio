@@ -62,6 +62,9 @@ const ProjectImage = styled.div`
   width: 100%;
   height: 175px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   > img {
     width: 110%;
   }
@@ -103,6 +106,10 @@ const PreviousDesign = styled.div`
   cursor: url(${hand}), auto;
 `;
 
+const StyledImage = styled.img`
+  ${(props) => props.loading && "display: none"}
+`;
+
 export {
   Heading,
   StyledList,
@@ -115,4 +122,5 @@ export {
   WebProjectVector,
   ListWrapper,
   PreviousDesign,
+  StyledImage,
 };

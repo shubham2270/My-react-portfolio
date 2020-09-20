@@ -8,6 +8,7 @@ import { ReactComponent as VectorArt } from "../../Assets/Vector/webproject.svg"
 import ProjectList from "./ProjectList";
 import ProjectCard from "./ProjectCard";
 import PreviousDesign from "./PreviousDesign";
+import useBoolean from "../../hooks/useBoolean";
 
 import {
   Heading,
@@ -19,7 +20,8 @@ import {
 
 const Work = () => {
   const [currentProject, setCurrentProject] = useState(null);
-  const { image, desc, url, github } = currentProject || "";
+  const { value, setValue } = useBoolean(false);
+  const { image, desc, url, github, gif } = currentProject || "";
 
   // Filter selected project from data and store in local state
   const findSelectedProject = (selectedId) => {
@@ -71,13 +73,22 @@ const Work = () => {
                     styles={props}
                     findSelectedProject={findSelectedProject}
                     name={projectData[index].name}
+                    setValue={setValue}
                   />
                 );
               })}
             </StyledList>
           </Content>
           {currentProject ? (
-            <ProjectCard image={image} desc={desc} url={url} github={github} />
+            <ProjectCard
+              image={image}
+              desc={desc}
+              url={url}
+              github={github}
+              gif={gif}
+              value={value}
+              setValue={setValue}
+            />
           ) : (
             <WebProjectVector style={flip}>
               <VectorArt />

@@ -2,6 +2,7 @@ export const projectData = [
   {
     id: 0,
     image: "book-store.jpg",
+    gif: "bookstore.gif",
     alt: "book search",
     name: "Book Search",
     desc:
@@ -12,6 +13,7 @@ export const projectData = [
   {
     id: 1,
     image: "smart-brain.jpg",
+    gif: "smart-brain.gif",
     alt: "smart brain app thumbnail",
     name: "Smart Brain",
     desc:
@@ -22,6 +24,7 @@ export const projectData = [
   {
     id: 2,
     image: "christmas-light.jpg",
+    gif: "rgblights1.gif",
     alt: "RGB lights",
     name: "RGB lights",
     desc:
@@ -32,6 +35,7 @@ export const projectData = [
   {
     id: 3,
     image: "cat-finder.jpg",
+    gif: "cat-finder.gif",
     alt: "cat finder app thumbnail",
     name: "Cat pics search",
     desc:
@@ -42,6 +46,7 @@ export const projectData = [
   {
     id: 4,
     image: "realestate.jpg",
+    gif: "realestate.gif",
     alt: "astrology website thumbnail",
     name: "RealEstate website",
     desc: "A RealEstate responsive website created using Bootstrap 4",
@@ -51,6 +56,7 @@ export const projectData = [
   {
     id: 5,
     image: "astro.jpg",
+    gif: "astro.gif",
     alt: "astrology website thumbnail",
     name: "Astro World",
     desc:

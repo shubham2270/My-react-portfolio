@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import useBoolean from "../../../hooks/useBoolean";
+import useAnimations from "../../../animations/work/useAnimations";
 import {
   PreviousDesignButton,
   ContentWrapper,
@@ -11,13 +12,28 @@ import {
 
 const PreviousDesign = () => {
   const { toggle, value: modal } = useBoolean(false);
+  const { slideDown, setActive } = useAnimations();
+
+  // Hide modal from dom only after closing animation finishes
+  const closeModalAfterDelay = () => {
+    if (!modal) {
+      toggle();
+      setActive(true);
+    } else {
+      setActive(false);
+      setTimeout(() => {
+        toggle();
+      }, 350);
+    }
+  };
+
   return (
     <>
-      <PreviousDesignButton onClick={() => toggle()} active={modal}>
+      <PreviousDesignButton onClick={closeModalAfterDelay} active={modal}>
         Previous portfolio designs
       </PreviousDesignButton>
       {modal && (
-        <ContentWrapper>
+        <ContentWrapper style={slideDown}>
           <Version
             href="https://shubham2270.github.io/My-Portfolio-v2"
             target="_blank"

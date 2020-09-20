@@ -11,9 +11,15 @@ const useAnimations = () => {
     config: { duration: 100 },
   });
 
+  const slideDown = useSpring({
+    height: active ? "165px" : "0px",
+    opacity: active ? 1 : 0,
+  });
+
   return {
     textZoom,
     setActive,
+    slideDown,
   };
 };
 

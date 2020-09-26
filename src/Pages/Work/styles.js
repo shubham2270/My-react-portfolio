@@ -45,7 +45,7 @@ const Wrapper = styled.div`
 `;
 
 const ProjectWrapper = styled(animated.div)`
-  width: 384px;
+  width: 500px;
   background: ${color.grey};
   position: absolute;
   right: 12em;
@@ -60,7 +60,7 @@ const SubWrapper = styled.div`
 
 const ProjectImage = styled.div`
   width: 100%;
-  height: 175px;
+  height: 250px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -107,7 +107,25 @@ const PreviousDesign = styled.div`
 `;
 
 const StyledImage = styled.img`
-  ${(props) => props.loading && "display: none"}
+  ${(props) => props.loading && "display: none"};
+`;
+
+const Slider = styled(animated.div)`
+  width: 100%;
+  height: 100%;
+  background-color: ${color.dark};
+  opacity: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const GifBackground = styled.div`
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: ${(props) => `url(${props.gif})`};
 `;
 
 export {
@@ -123,4 +141,6 @@ export {
   ListWrapper,
   PreviousDesign,
   StyledImage,
+  GifBackground,
+  Slider,
 };

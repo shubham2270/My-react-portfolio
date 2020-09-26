@@ -1,6 +1,6 @@
-const dark = "#000a12";
-const grey = "#4f5b62";
-const green = "#b2ff59";
+const dark = "#222035";
+const grey = "#575267";
+const green = "#65dc98";
 const white = "#ffffff";
 
 export { dark, grey, green, white };

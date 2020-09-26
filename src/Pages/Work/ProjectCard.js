@@ -9,36 +9,37 @@ import {
   ProjectInfo,
   ButtonWrapper,
   StyledImage,
+  GifBackground,
+  Slider,
 } from "./styles";
 import { green } from "../../Constants/colors";
 import useBoolean from "../../hooks/useBoolean";
+import useAnimations from "../../animations/work/useAnimations";
 
 const ProjectCard = ({ image, desc, url, github, gif, setValue, value }) => {
-  const { value: isError, setValue: setError } = useBoolean(false);
-
+  // const { value: isError, setValue: setError } = useBoolean(false);
   const { value: isLoading, setValue: setLoader } = useBoolean(true);
+  const { slideRight, setActive, active } = useAnimations();
 
   useEffect(() => {
     setLoader(true);
   }, [image, setLoader]);
 
-  const loadImage = isError || !value;
+  // const loadImage = isError;
   return (
     <ProjectWrapper>
       <ProjectImage>
-        {loadImage && (
-          <StyledImage
-            src={require(`../../Assets/projectImages/webprojects/${image}`)}
-            alt=""
-            key={image}
-            loading={isLoading}
-            onLoad={() => {
-              setLoader(false);
-            }}
-          />
-        )}
+        {/* <StyledImage
+          src={require(`../../Assets/projectImages/webprojects/${image}`)}
+          alt=""
+          key={image}
+          loading={isLoading}
+          onLoad={() => {
+            setLoader(false);
+          }}
+        /> */}
 
-        {isLoading && !value && (
+        {/* {isLoading && (
           <Loader
             type="Circles"
             color={green}
@@ -46,17 +47,19 @@ const ProjectCard = ({ image, desc, url, github, gif, setValue, value }) => {
             width={70}
             timeout={3000}
           />
-        )}
+        )} */}
 
-        <StyledImage
-          src={require(`../../Assets/projectImages/webprojects/${gif}`)}
-          alt=""
-          onLoad={() => setValue(true)}
-          loading={!value}
-          onError={() => setError(true)}
-        />
+        <GifBackground
+          gif={require(`../../Assets/projectImages/webprojects/${gif}`)}
+          onMouseEnter={() => setActive(true)}
+          onMouseLeave={() => setActive(false)}
+        >
+          <Slider style={slideRight}>
+            {!active && <ProjectInfo>{desc}</ProjectInfo>}
+          </Slider>
+        </GifBackground>
       </ProjectImage>
-      <ProjectInfo>{desc}</ProjectInfo>
+
       <ButtonWrapper>
         <Button link={url} name="Demo" />
         <Button link={github} name="Github" />

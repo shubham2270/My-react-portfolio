@@ -16,10 +16,18 @@ const useAnimations = () => {
     opacity: active ? 1 : 0,
   });
 
+  const slideRight = useSpring({
+    transform: active
+      ? "translateX(70%) skew(-20deg)"
+      : "translateX(0%) skew(0deg)",
+  });
+
   return {
     textZoom,
     setActive,
     slideDown,
+    slideRight,
+    active,
   };
 };
 

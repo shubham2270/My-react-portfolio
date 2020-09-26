@@ -18,7 +18,7 @@ const useAnimations = () => {
 
   const slideRight = useSpring({
     transform: active
-      ? "translateX(70%) skew(-20deg)"
+      ? "translateX(80%) skew(-18deg)"
       : "translateX(0%) skew(0deg)",
   });
 

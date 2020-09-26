@@ -49,8 +49,7 @@ const ProjectWrapper = styled(animated.div)`
   background: ${color.grey};
   position: absolute;
   right: 12em;
-  top: 5em;
-  padding-bottom: 16px;
+  top: 10em;
 `;
 
 const SubWrapper = styled.div`
@@ -118,6 +117,17 @@ const Slider = styled(animated.div)`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  > a {
+    position: absolute;
+    left: 10px;
+    &:nth-child(1) {
+      bottom: 10px;
+    }
+    &:nth-child(2) {
+      bottom: 50px;
+    }
+  }
 `;
 
 const GifBackground = styled.div`

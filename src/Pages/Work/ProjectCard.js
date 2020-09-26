@@ -56,14 +56,20 @@ const ProjectCard = ({ image, desc, url, github, gif, setValue, value }) => {
         >
           <Slider style={slideRight}>
             {!active && <ProjectInfo>{desc}</ProjectInfo>}
+            {active && (
+              <>
+                <Button link={url} name="Demo" />
+                <Button link={github} name="Github" />
+              </>
+            )}
           </Slider>
         </GifBackground>
       </ProjectImage>
-
+      {/* 
       <ButtonWrapper>
         <Button link={url} name="Demo" />
         <Button link={github} name="Github" />
-      </ButtonWrapper>
+      </ButtonWrapper> */}
     </ProjectWrapper>
   );
 };

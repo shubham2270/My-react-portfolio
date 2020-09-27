@@ -50,6 +50,16 @@ const ProjectWrapper = styled(animated.div)`
   position: absolute;
   right: 12em;
   top: 10em;
+  /* background: yellow; */
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  overflow: hidden;
+  > span {
+    padding-left: 4em;
+    font-size: 3em;
+  }
 `;
 
 const SubWrapper = styled.div`
@@ -57,7 +67,7 @@ const SubWrapper = styled.div`
   top: -2em;
 `;
 
-const ProjectImage = styled.div`
+const ProjectImage = styled(animated.div)`
   width: 100%;
   height: 250px;
   overflow: hidden;

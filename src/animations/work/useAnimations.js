@@ -9,6 +9,7 @@ const useAnimations = () => {
     false
   );
   const [active, setActive] = useState(false);
+  const [fading, setFading] = useState(false);
   const textZoom = useSpring({
     from: { fontSize: medium },
     to: { fontSize: active ? "21px" : medium },
@@ -43,17 +44,20 @@ const useAnimations = () => {
     },
   });
 
-  //  const introAnimation = useSpring({
-  //    from: {
-  //      transform: "translateX(-50px)",
-  //      color: "brown",
-  //    },
-  //    to: {
-  //      transform: secondAnimate ? "translateX(0px)" : "translateX(15px)",
-  //      color: color.grey,
-  //    },
-  //    onRest: () => setSecondAnimate(true),
-  //  });
+  const fade = useSpring({
+    opacity: fading ? 0 : 1,
+    config: {
+      duration: 300,
+    },
+  });
+
+  const slideInLeft = useSpring({
+    // height: fading ? "0px" : "250px",
+    transform: fading ? "translateX(100%)" : "translateX(0%)",
+    config: {
+      duration: 250,
+    },
+  });
 
   return {
     textZoom,
@@ -63,6 +67,10 @@ const useAnimations = () => {
     pop1,
     pop2,
     active,
+    fade,
+    setFading,
+    slideInLeft,
+    fading,
   };
 };
 

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { animated } from "react-spring";
 // import Loader from "react-loader-spinner";
@@ -20,8 +20,31 @@ import { ReactComponent as BrowserLogo } from "../../Assets/Icons/social/browser
 
 const ProjectCard = ({ image, desc, url, github, gif, setValue, value }) => {
   // const { value: isError, setValue: setError } = useBoolean(false);
+  const [description, setDescription] = useState("");
   const { value: isLoading, setValue: setLoader } = useBoolean(true);
-  const { slideRight, setActive, active, pop1, pop2 } = useAnimations();
+  const {
+    slideRight,
+    setActive,
+    active,
+    pop1,
+    pop2,
+    fade,
+    setFading,
+    slideInLeft,
+    fading,
+  } = useAnimations();
+
+  const emojis = ["🌟", "✨", "👾", "👀", "🤖", "😁", "🔥", "⚡", "😊", "💫"];
+  const randomNumber = Math.floor(Math.random() * emojis.length);
+
+  // Put fading effect on project desciption change
+  useEffect(() => {
+    setFading(true);
+    setTimeout(() => {
+      setDescription(desc);
+      setFading(false);
+    }, 400);
+  }, [desc, setFading]);
 
   useEffect(() => {
     setLoader(true);
@@ -30,7 +53,8 @@ const ProjectCard = ({ image, desc, url, github, gif, setValue, value }) => {
   // const loadImage = isError;
   return (
     <ProjectWrapper>
-      <ProjectImage>
+      {fading && <span role="img">{emojis[randomNumber]}</span>}{" "}
+      <ProjectImage style={slideInLeft}>
         {/* <StyledImage
           src={require(`../../Assets/projectImages/webprojects/${image}`)}
           alt=""
@@ -57,13 +81,14 @@ const ProjectCard = ({ image, desc, url, github, gif, setValue, value }) => {
           onMouseLeave={() => setActive(false)}
         >
           <Slider style={slideRight}>
-            {!active && <ProjectInfo>{desc}</ProjectInfo>}
+            <ProjectInfo style={fade}>{description}</ProjectInfo>
             <IconWrapper>
               <animated.a
                 href={github}
                 style={pop1}
                 target="_blank"
                 rel="noopener noreferrer"
+                title="Github"
               >
                 <GithubLogo />
               </animated.a>
@@ -72,6 +97,7 @@ const ProjectCard = ({ image, desc, url, github, gif, setValue, value }) => {
                 style={pop2}
                 target="_blank"
                 rel="noopener noreferrer"
+                title="Live"
               >
                 <BrowserLogo />
               </animated.a>

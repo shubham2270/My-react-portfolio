@@ -6,7 +6,9 @@ import * as fonts from "../../Constants/fonts";
 import * as size from "../../Constants/size";
 
 const NameContainer = styled.div`
-  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 const Intro = styled(animated.div)`
@@ -35,4 +37,18 @@ const AnimatedSpan = styled(animated.span)`
   display: block;
 `;
 
-export { NameContainer, Intro, Name, SecondaryName, AnimatedSpan };
+const AvatarWrapper = styled.div`
+  > svg {
+    width: 50%;
+    height: 50%;
+  }
+`;
+
+export {
+  NameContainer,
+  Intro,
+  Name,
+  SecondaryName,
+  AnimatedSpan,
+  AvatarWrapper,
+};

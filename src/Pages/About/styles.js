@@ -12,6 +12,7 @@ const Heading = styled.div`
 `;
 
 const Content = styled.div`
+  width: 60%;
   color: ${color.white};
   font-size: ${size.medium};
   font-display: ${fonts.secondary};
@@ -19,7 +20,15 @@ const Content = styled.div`
 `;
 
 const AboutWrapper = styled.div`
-  width: 40%;
+  width: 90%;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
 `;
 
-export { Heading, Content, AboutWrapper };
+const MyPicture = styled.img`
+  width: 40%;
+  filter: grayscale(0.8);
+`;
+
+export { Heading, Content, AboutWrapper, MyPicture };

@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useSpring } from "react-spring";
 import { useDencrypt } from "use-dencrypt-effect";
-import WAVES from "vanta/dist/vanta.waves.min";
+import RINGS from "vanta/dist/vanta.rings.min";
 
 import * as color from "../../Constants/colors";
 import useBoolean from "../../hooks/useBoolean";
@@ -65,30 +65,41 @@ const useAnimations = () => {
 
   // Remove # from color code
   const darkColor = color.dark.substring(1);
+  const green = color.green.substring(1);
 
   // Background animations
-  useEffect(() => {
-    if (!vantaEffect) {
-      setVantaEffect(
-        WAVES({
-          el: myRef.current,
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-          minHeight: 200.0,
-          minWidth: 200.0,
-          scale: 1.0,
-          scaleMobile: 1.0,
-          color: Number(`0x${darkColor}`),
-          shininess: 11.0,
-          waveSpeed: 0.4,
-        })
-      );
-    }
-    return () => {
-      if (vantaEffect) vantaEffect.destroy();
-    };
-  }, [vantaEffect, myRef, darkColor]);
+  // useEffect(() => {
+  //   if (!vantaEffect) {
+  //     setVantaEffect(
+  //       RINGS({
+  //         el: myRef.current,
+  //         // mouseControls: true,
+  //         // touchControls: true,
+  //         // gyroControls: false,
+  //         // minHeight: 200.0,
+  //         // minWidth: 200.0,
+  //         // scale: 1.0,
+  //         // scaleMobile: 1.0,
+  //         // color: Number(`0x${darkColor}`),
+  //         // shininess: 11.0,
+  //         // waveSpeed: 0.4,
+
+  //         mouseControls: true,
+  //         touchControls: true,
+  //         gyroControls: false,
+  //         minHeight: 200.0,
+  //         minWidth: 200.0,
+  //         scale: 1.0,
+  //         scaleMobile: 1.0,
+  //         backgroundColor: Number(`0x${darkColor}`),
+  //         color: Number(`0x${green}`),
+  //       })
+  //     );
+  //   }
+  //   return () => {
+  //     if (vantaEffect) vantaEffect.destroy();
+  //   };
+  // }, [vantaEffect, myRef, darkColor]);
 
   return {
     nameAnimation,

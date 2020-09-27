@@ -1,25 +1,27 @@
 import React, { useEffect } from "react";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import Loader from "react-loader-spinner";
-import Button from "../../Components/Button";
+import { animated } from "react-spring";
+// import Loader from "react-loader-spinner";
 
 import {
   ProjectWrapper,
   ProjectImage,
   ProjectInfo,
-  ButtonWrapper,
-  StyledImage,
+  IconWrapper,
+  // StyledImage,
   GifBackground,
   Slider,
+  DecorativeGif,
 } from "./styles";
-import { green } from "../../Constants/colors";
 import useBoolean from "../../hooks/useBoolean";
 import useAnimations from "../../animations/work/useAnimations";
+import { ReactComponent as GithubLogo } from "../../Assets/Icons/social/githubProject.svg";
+import { ReactComponent as BrowserLogo } from "../../Assets/Icons/social/browser.svg";
 
 const ProjectCard = ({ image, desc, url, github, gif, setValue, value }) => {
   // const { value: isError, setValue: setError } = useBoolean(false);
   const { value: isLoading, setValue: setLoader } = useBoolean(true);
-  const { slideRight, setActive, active } = useAnimations();
+  const { slideRight, setActive, active, pop1, pop2 } = useAnimations();
 
   useEffect(() => {
     setLoader(true);
@@ -56,20 +58,30 @@ const ProjectCard = ({ image, desc, url, github, gif, setValue, value }) => {
         >
           <Slider style={slideRight}>
             {!active && <ProjectInfo>{desc}</ProjectInfo>}
+            <IconWrapper>
+              <animated.a
+                href={github}
+                style={pop1}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <GithubLogo />
+              </animated.a>
+              <animated.a
+                href={url}
+                style={pop2}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <BrowserLogo />
+              </animated.a>
+            </IconWrapper>
             {active && (
-              <>
-                <Button link={url} name="Demo" />
-                <Button link={github} name="Github" />
-              </>
+              <DecorativeGif src="https://media.giphy.com/media/sULKEgDMX8LcI/giphy.gif" />
             )}
           </Slider>
         </GifBackground>
       </ProjectImage>
-      {/* 
-      <ButtonWrapper>
-        <Button link={url} name="Demo" />
-        <Button link={github} name="Github" />
-      </ButtonWrapper> */}
     </ProjectWrapper>
   );
 };

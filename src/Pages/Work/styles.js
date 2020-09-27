@@ -69,12 +69,22 @@ const ProjectImage = styled.div`
   }
 `;
 
-const ButtonWrapper = styled.div`
+const IconWrapper = styled(animated.div)`
+  height: 45px;
+  width: 30%;
+  position: absolute;
+  top: 5px;
+  left: 5px;
   display: flex;
-  width: 100%;
-  justify-content: space-around;
-  align-items: center;
-  padding-top: 10px;
+  > a {
+    transform: scale(0);
+  }
+  > a > svg {
+    width: 80%;
+    height: 80%;
+    fill: ${color.green};
+    cursor: url(${hand}), auto;
+  }
 `;
 
 const ProjectInfo = styled(animated.div)`
@@ -112,22 +122,14 @@ const StyledImage = styled.img`
 const Slider = styled(animated.div)`
   width: 100%;
   height: 100%;
-  background-color: ${color.dark};
-  opacity: 90%;
+  background-color: black;
+  opacity: 85%;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  > a {
-    position: absolute;
-    left: 10px;
-    &:nth-child(1) {
-      bottom: 10px;
-    }
-    &:nth-child(2) {
-      bottom: 50px;
-    }
-  }
+  border-top: 2px solid ${color.green};
+  box-sizing: border-box;
 `;
 
 const GifBackground = styled.div`
@@ -138,6 +140,15 @@ const GifBackground = styled.div`
   background-image: ${(props) => `url(${props.gif})`};
 `;
 
+const DecorativeGif = styled.img`
+  width: 50%;
+  height: 35px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-size: cover;
+`;
+
 export {
   Heading,
   StyledList,
@@ -145,7 +156,7 @@ export {
   ProjectWrapper,
   SubWrapper,
   ProjectImage,
-  ButtonWrapper,
+  IconWrapper,
   ProjectInfo,
   WebProjectVector,
   ListWrapper,
@@ -153,4 +164,5 @@ export {
   StyledImage,
   GifBackground,
   Slider,
+  DecorativeGif,
 };

@@ -63,10 +63,8 @@ const useAnimations = () => {
     onRest: () => setSecondAnimate(true),
   });
 
+  // Remove # from color code
   const darkColor = color.dark.substring(1);
-  // const colorNum = Number(darkColor);
-
-  console.log("darkcolor", Number(darkColor));
 
   // Background animations
   useEffect(() => {
@@ -81,7 +79,6 @@ const useAnimations = () => {
           minWidth: 200.0,
           scale: 1.0,
           scaleMobile: 1.0,
-          // color: 0x000a12,
           color: Number(`0x${darkColor}`),
           shininess: 11.0,
           waveSpeed: 0.4,
@@ -91,7 +88,7 @@ const useAnimations = () => {
     return () => {
       if (vantaEffect) vantaEffect.destroy();
     };
-  }, [vantaEffect, myRef]);
+  }, [vantaEffect, myRef, darkColor]);
 
   return {
     nameAnimation,

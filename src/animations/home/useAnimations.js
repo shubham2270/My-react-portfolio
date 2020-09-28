@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { useSpring } from "react-spring";
 import { useDencrypt } from "use-dencrypt-effect";
 
@@ -12,7 +12,6 @@ const useAnimations = () => {
 
   const values = ["Front End Developer"];
   const { result, dencrypt } = useDencrypt();
-  const myRef = useRef(null);
 
   // secondary crypt text animations
   useEffect(() => {
@@ -67,7 +66,6 @@ const useAnimations = () => {
     wavingHandAnimationDown,
     introAnimation,
     cryptAnimationText: result,
-    myRef,
   };
 };
 

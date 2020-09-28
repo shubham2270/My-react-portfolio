@@ -21,11 +21,10 @@ const Home = () => {
     wavingHandAnimationDown,
     introAnimation,
     cryptAnimationText,
-    myRef,
   } = useAnimations();
 
   return (
-    <MainContainer ref={myRef}>
+    <MainContainer>
       <NameContainer>
         <div>
           <Intro style={introAnimation}>

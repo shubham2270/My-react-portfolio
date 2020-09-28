@@ -1,17 +1,18 @@
 import styled from "styled-components";
+import { animated } from "react-spring";
 
 import * as color from "../../Constants/colors";
 import * as fonts from "../../Constants/fonts";
 import * as size from "../../Constants/size";
 
-const Heading = styled.div`
+const Heading = styled(animated.div)`
   color: ${color.grey};
   font-size: ${size.large};
   font-family: ${fonts.primary};
   padding-bottom: 20px;
 `;
 
-const Content = styled.div`
+const Content = styled(animated.div)`
   color: ${color.white};
   font-size: ${size.medium};
   font-display: ${fonts.secondary};
@@ -26,7 +27,7 @@ const AboutWrapper = styled.div`
   height: 500px;
 `;
 
-const MyPicture = styled.img`
+const MyPicture = styled(animated.img)`
   width: 40%;
 `;
 

@@ -6,4 +6,12 @@ const Heading = styled(aboutHeading)`
   line-height: 4.5rem;
 `;
 
-export { Heading };
+const SkillWrapper = styled.div`
+  display: flex;
+`;
+
+const SkillContent = styled.div`
+  width: 40%;
+`;
+
+export { Heading, SkillWrapper, SkillContent };

@@ -64,8 +64,8 @@ const ProjectCard = ({ image, desc, url, github, gif, setValue, value }) => {
             setLoader(false);
           }}
         /> */}
-
-        {/* {isLoading && (
+{/* 
+        {isLoading && (
           <Loader
             type="Circles"
             color={green}

@@ -11,6 +11,7 @@ const Container = styled.div`
   display: flex;
   cursor: url(${cursor}), auto;
   user-select: none;
+  overflow: hidden;
 `;
 
 const Content = styled.div`

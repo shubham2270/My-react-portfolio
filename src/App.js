@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
 
 import "./styles.js";
@@ -12,6 +12,16 @@ import Work from "./Pages/Work";
 const cursor = require("./cursor.png");
 
 const App = () => {
+  const background = document.querySelector(".background");
+  const loader = document.querySelector(".loader");
+  // if you want to show the loader when React loads data again
+  const showLoader = () => loader.classList.remove("loader--hide");
+
+  const hideLoader = () => {
+    background.classList.add("loader--hide");
+    // loader.classList.add("loader--hide");
+  };
+  useEffect(hideLoader, []);
   return (
     <Container>
       <NavBar />

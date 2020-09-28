@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useSpring } from "react-spring";
 
 import { medium } from "../../Constants/size";
@@ -52,7 +52,6 @@ const useAnimations = () => {
   });
 
   const slideInLeft = useSpring({
-    // height: fading ? "0px" : "250px",
     transform: fading ? "translateX(100%)" : "translateX(0%)",
     config: {
       duration: 250,

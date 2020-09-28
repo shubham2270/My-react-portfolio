@@ -12,7 +12,6 @@ const Heading = styled.div`
 `;
 
 const Content = styled.div`
-  width: 60%;
   color: ${color.white};
   font-size: ${size.medium};
   font-display: ${fonts.secondary};
@@ -24,11 +23,15 @@ const AboutWrapper = styled.div`
   justify-content: space-between;
   display: flex;
   align-items: center;
+  height: 500px;
 `;
 
 const MyPicture = styled.img`
   width: 40%;
-  filter: grayscale(0.8);
 `;
 
-export { Heading, Content, AboutWrapper, MyPicture };
+const AboutContent = styled.div`
+  width: 550px;
+`;
+
+export { Heading, Content, AboutWrapper, MyPicture, AboutContent };

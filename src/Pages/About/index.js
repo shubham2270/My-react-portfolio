@@ -3,7 +3,13 @@ import { useTrail, animated } from "react-spring";
 import Loader from "react-loader-spinner";
 
 import MainContainer from "../styles";
-import { Heading, Content, AboutWrapper, MyPicture } from "./styles";
+import {
+  Heading,
+  Content,
+  AboutWrapper,
+  MyPicture,
+  AboutContent,
+} from "./styles";
 import Button from "../../Components/Button";
 import shubham from "../../Assets/shubham.jpg";
 import useBoolean from "../../hooks/useBoolean";
@@ -16,7 +22,7 @@ const About = () => {
   return (
     <MainContainer>
       <AboutWrapper>
-        <div>
+        <AboutContent>
           <Heading>About me</Heading>
           <Content>
             {trail.map((props) => (
@@ -35,7 +41,7 @@ const About = () => {
             link="https://drive.google.com/open?id=1qjMf_Umeb7Hd7AgYAd5BHP9_-CtyPqwU"
             name="Resume"
           />
-        </div>
+        </AboutContent>
         {isLoading && !Error && (
           <Loader type="Circles" color={green} height={70} width={70} />
         )}

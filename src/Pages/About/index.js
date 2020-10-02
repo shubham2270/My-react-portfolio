@@ -1,5 +1,4 @@
 import React from "react";
-import { useTrail, animated } from "react-spring";
 import Loader from "react-loader-spinner";
 
 import MainContainer from "../styles";

@@ -9,6 +9,7 @@ const NameContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 80%;
 `;
 
 const Intro = styled(animated.div)`
@@ -37,12 +38,7 @@ const AnimatedSpan = styled(animated.span)`
   display: block;
 `;
 
-const AvatarWrapper = styled.div`
-  > svg {
-    width: 50%;
-    height: 50%;
-  }
-`;
+const AvatarWrapper = styled.div``;
 
 export {
   NameContainer,

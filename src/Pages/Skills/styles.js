@@ -30,7 +30,6 @@ const SkillNameWrapper = styled.div`
 `;
 
 const IconWrapper = styled.div`
-  /* border: 1px solid red; */
   display: flex;
   height: 100%;
   align-items: center;
@@ -41,4 +40,19 @@ const IconWrapper = styled.div`
   }
 `;
 
-export { Heading, SkillWrapper, SkillContent, SkillNameWrapper, IconWrapper };
+const AnimationWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  > span {
+    padding-bottom: 2em;
+  }
+`;
+
+export {
+  Heading,
+  SkillWrapper,
+  SkillContent,
+  SkillNameWrapper,
+  IconWrapper,
+  AnimationWrapper,
+};

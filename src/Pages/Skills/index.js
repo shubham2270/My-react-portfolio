@@ -1,4 +1,5 @@
 import React from "react";
+import "@lottiefiles/lottie-player";
 
 import MainContainer from "../styles";
 import { Content } from "../About/styles";
@@ -8,6 +9,7 @@ import {
   SkillContent,
   SkillNameWrapper,
   IconWrapper,
+  AnimationWrapper,
 } from "./styles";
 
 import { ReactComponent as Html } from "../../Assets/Icons/dev/html.svg";
@@ -27,7 +29,20 @@ const Skills = () => {
     <MainContainer>
       <SkillWrapper>
         <SkillContent>
-          <Heading>Skills & Experience</Heading>
+          <AnimationWrapper>
+            <Heading>Skills & Experience</Heading>
+            {/* https://assets2.lottiefiles.com/packages/lf20_snxqzipw.json */}
+            <span>
+              <lottie-player
+                src="https://assets2.lottiefiles.com/packages/lf20_snxqzipw.json"
+                background="transparent"
+                speed="0.8"
+                style={{ width: "200px", height: "200px" }}
+                loop
+                autoplay
+              ></lottie-player>
+            </span>
+          </AnimationWrapper>
           <Content>
             Currently I am working as a Front end developer in Unifize a start
             up, using React Js, Redux, styled components etc , as main library

@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React from "react";
+import "@lottiefiles/lottie-player";
 
 import MainContainer from "../styles";
 import useAnimations from "../../animations/home/useAnimations";
-import { ReactComponent as Avatar } from "../../Assets/Vector/avatar.svg";
 
 import {
   NameContainer,
@@ -43,7 +43,14 @@ const Home = () => {
           </SecondaryName>
         </div>
         <AvatarWrapper>
-          <Avatar />
+          <lottie-player
+            src="https://assets10.lottiefiles.com/private_files/lf30_WdTEui.json"
+            background="transparent"
+            speed="0.8"
+            style={{ width: "400px", height: "400px" }}
+            loop
+            autoplay
+          ></lottie-player>
         </AvatarWrapper>
       </NameContainer>
     </MainContainer>

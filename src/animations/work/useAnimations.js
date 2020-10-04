@@ -5,9 +5,6 @@ import { medium } from "../../Constants/size";
 import useBoolean from "../../hooks/useBoolean";
 
 const useAnimations = () => {
-  const { value: secondAnimate, setValue: setSecondAnimate } = useBoolean(
-    false
-  );
   const [active, setActive] = useState(false);
   const [fading, setFading] = useState(false);
   const textZoom = useSpring({
@@ -17,7 +14,7 @@ const useAnimations = () => {
   });
 
   const slideDown = useSpring({
-    height: active ? "165px" : "0px",
+    height: active ? "185px" : "0px",
     opacity: active ? 1 : 0,
   });
 

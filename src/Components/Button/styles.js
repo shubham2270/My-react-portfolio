@@ -3,6 +3,7 @@ import styled from "styled-components";
 import * as color from "../../Constants/colors";
 import * as fonts from "../../Constants/fonts";
 import * as size from "../../Constants/size";
+import hand from "../../Constants/cursor";
 
 const StyledLink = styled.a`
   background: ${color.green};
@@ -13,6 +14,7 @@ const StyledLink = styled.a`
   padding: 9px 12px;
   display: flex;
   justify-content: center;
+  cursor: ${hand};
 `;
 
 export { StyledLink };

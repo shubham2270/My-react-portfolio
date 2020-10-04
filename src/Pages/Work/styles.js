@@ -3,8 +3,7 @@ import { animated } from "react-spring";
 
 import { Heading as aboutHeading } from "../About/styles";
 import * as color from "../../Constants/colors";
-import hand from "../../Assets/cursors/hand.png";
-
+import hand from "../../Constants/cursor";
 const Heading = styled(aboutHeading)`
   line-height: 4rem;
   font-size: 3em;
@@ -20,14 +19,14 @@ const StyledList = styled.ul`
     &:nth-child(1) {
       margin-top: 0px;
     }
-    cursor: url(${hand}), auto;
+    cursor: ${hand};
     margin-top: 20px;
     list-style-type: square;
   }
 `;
 
 const ListWrapper = styled(animated.div)`
-  cursor: url(${hand}), auto;
+  cursor: ${hand};
   &:hover {
     color: ${color.green};
   }
@@ -93,15 +92,13 @@ const IconWrapper = styled(animated.div)`
     width: 80%;
     height: 80%;
     fill: ${color.green};
-    cursor: url(${hand}), auto;
+    cursor: ${hand};
   }
 `;
 
 const ProjectInfo = styled(animated.div)`
   padding: 16px;
   line-height: 1.6rem;
-  max-height: 150px;
-  overflow: auto;
 `;
 
 const WebProjectVector = styled(animated.div)`
@@ -122,7 +119,7 @@ const PreviousDesign = styled.div`
   right: 1em;
   top: 1em;
   color: yellow;
-  cursor: url(${hand}), auto;
+  cursor: ${hand};
 `;
 
 const StyledImage = styled.img`

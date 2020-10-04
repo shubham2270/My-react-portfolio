@@ -4,7 +4,8 @@ import { animated } from "react-spring";
 import * as color from "../../../Constants/colors";
 import * as size from "../../../Constants/size";
 import { primary, secondary, monoCode } from "../../../Constants/fonts";
-import hand from "../../../Assets/cursors/hand.png";
+// import hand from "../../../Assets/cursors/hand.png";
+import hand from "../../../Constants/cursor";
 
 const PreviousDesignButton = styled.div`
   border: 1px solid ${color.green};
@@ -14,7 +15,7 @@ const PreviousDesignButton = styled.div`
   right: 1em;
   top: 1em;
   color: ${(props) => (props.active ? color.white : color.green)};
-  cursor: url(${hand}), auto;
+  cursor: ${hand};
   font-family: ${primary};
   &:hover {
     color: ${color.white};
@@ -49,7 +50,7 @@ const Version = styled.a`
   text-decoration: none;
   &:hover {
     color: white;
-    cursor: url(${hand}), auto;
+    cursor: ${hand};
   }
 `;
 

@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 import * as colors from "../Constants/colors";
-import hand from "../Assets/cursors/hand.png";
+// import hand from "../Assets/cursors/hand.png";
+import hand from "../Constants/cursor";
 
 const Nav = styled.div`
   display: grid;
@@ -18,12 +19,12 @@ const NavIconsWrapper = styled.div`
   display: grid;
   place-items: center;
   > a {
-    cursor: url(${hand}), auto;
+    cursor: ${hand};
   }
   > a > svg {
     width: 28px;
     fill: ${colors.green};
-    cursor: url(${hand}), auto;
+    cursor: ${hand};
   }
 `;
 

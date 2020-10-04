@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 import { Heading as aboutHeading } from "../About/styles";
-import hand from "../../Assets/cursors/hand.png";
-
 import * as colors from "../../Constants/colors";
+import hand from "../../Constants/cursor";
 
 const Heading = styled(aboutHeading)`
   line-height: 4.5rem;
@@ -15,7 +14,7 @@ const SocialIconWrapper = styled.div`
   width: 400px;
   justify-content: space-around;
   > a {
-    cursor: url(${hand}), auto;
+    cursor: ${hand};
   }
   > a > svg > g > g {
     stroke: ${colors.green};

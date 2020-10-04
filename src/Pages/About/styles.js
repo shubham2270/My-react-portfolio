@@ -28,11 +28,11 @@ const AboutWrapper = styled.div`
 `;
 
 const MyPicture = styled(animated.img)`
-  width: 40%;
+  width: 35%;
 `;
 
 const AboutContent = styled.div`
-  width: 550px;
+  width: 400px;
 `;
 
 export { Heading, Content, AboutWrapper, MyPicture, AboutContent };

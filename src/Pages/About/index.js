@@ -14,6 +14,7 @@ import shubham from "../../Assets/shubham.jpg";
 import useBoolean from "../../hooks/useBoolean";
 import { green } from "../../Constants/colors";
 import useAnimations from "../../animations/home/useAnimations";
+import TimeLine from "../../Components/TimeLine/index";
 
 const About = () => {
   const { value: Error, setValue: setError } = useBoolean(false);
@@ -42,6 +43,7 @@ const About = () => {
         {isLoading && !Error && (
           <Loader type="Circles" color={green} height={70} width={70} />
         )}
+        <TimeLine />
 
         {!Error && (
           <MyPicture

@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 import * as color from "./Constants/colors";
 import cursor from "./cursor.png";
+import { device } from "./Constants/screen";
+
+const { tablet } = device;
 
 const Container = styled.div`
   width: 100vw;
@@ -12,6 +15,10 @@ const Container = styled.div`
   cursor: url(${cursor}), auto;
   user-select: none;
   overflow: hidden;
+
+  @media ${tablet} {
+    flex-direction: column;
+  }
 `;
 
 const Content = styled.div`

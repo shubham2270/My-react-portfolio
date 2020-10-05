@@ -2,8 +2,10 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 import * as colors from "../Constants/colors";
-// import hand from "../Assets/cursors/hand.png";
 import hand from "../Constants/cursor";
+import { device } from "../Constants/screen";
+
+const { tablet } = device;
 
 const Nav = styled.div`
   display: grid;
@@ -11,6 +13,11 @@ const Nav = styled.div`
   width: 5vw;
   height: 100%;
   background: ${colors.grey};
+
+  @media ${tablet} {
+    height: 50px;
+    width: 100%;
+  }
 `;
 
 const NavIconsWrapper = styled.div`
@@ -25,6 +32,18 @@ const NavIconsWrapper = styled.div`
     width: 28px;
     fill: ${colors.green};
     cursor: ${hand};
+  }
+  @media ${tablet} {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    > a > svg {
+      width: 30px;
+      fill: ${colors.green};
+      cursor: ${hand};
+    }
   }
 `;
 

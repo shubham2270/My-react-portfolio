@@ -4,6 +4,7 @@ import "@lottiefiles/lottie-player";
 
 import MainContainer from "../styles";
 import useAnimations from "../../animations/home/useAnimations";
+import useMediaQuery from "../../hooks/useMediaQuery";
 
 import {
   NameContainer,
@@ -22,6 +23,12 @@ const Home = () => {
     introAnimation,
     cryptAnimationText,
   } = useAnimations();
+
+  const isSmallScreen = useMediaQuery("(max-width: 768px)");
+  const animationStyle = {
+    width: isSmallScreen ? "200px" : "400px",
+    height: isSmallScreen ? "200px" : "400px",
+  };
 
   return (
     <MainContainer>
@@ -47,7 +54,7 @@ const Home = () => {
             src="https://assets10.lottiefiles.com/private_files/lf30_WdTEui.json"
             background="transparent"
             speed="0.8"
-            style={{ width: "400px", height: "400px" }}
+            style={animationStyle}
             loop
             autoplay
           ></lottie-player>

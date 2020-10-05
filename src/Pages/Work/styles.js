@@ -4,9 +4,15 @@ import { animated } from "react-spring";
 import { Heading as aboutHeading } from "../About/styles";
 import * as color from "../../Constants/colors";
 import hand from "../../Constants/cursor";
+import { device } from "../../Constants/screen";
+
 const Heading = styled(aboutHeading)`
   line-height: 4rem;
   font-size: 3em;
+  @media ${device} {
+    line-height: 2rem;
+    font-size: 1.2rem;
+  }
 `;
 
 const StyledList = styled.ul`
@@ -41,6 +47,9 @@ const ListWrapper = styled(animated.div)`
 
 const Wrapper = styled.div`
   width: 60%;
+  @media ${device.tablet} {
+    width: 100%;
+  }
 `;
 
 const ProjectWrapper = styled(animated.div)`
@@ -49,7 +58,6 @@ const ProjectWrapper = styled(animated.div)`
   position: absolute;
   right: 12em;
   top: 10em;
-  /* background: yellow; */
   height: 250px;
   display: flex;
   align-items: center;
@@ -64,6 +72,10 @@ const ProjectWrapper = styled(animated.div)`
 const SubWrapper = styled.div`
   position: relative;
   top: -2em;
+  @media ${device.tablet} {
+    top: 0em;
+    padding: 20px;
+  }
 `;
 
 const ProjectImage = styled(animated.div)`
@@ -109,6 +121,16 @@ const WebProjectVector = styled(animated.div)`
     width: 500px;
     height: 50%;
   }
+  @media ${device.tablet} {
+    display: none;
+    /* position: absolute;
+    bottom: 1em;
+    > svg {
+      width: 100px;
+      height: 50%;
+    }
+    */
+  }
 `;
 
 const PreviousDesign = styled.div`
@@ -120,6 +142,10 @@ const PreviousDesign = styled.div`
   top: 1em;
   color: yellow;
   cursor: ${hand};
+  @media ${device.tablet} {
+    /* right: 1em; */
+    top: 3em;
+  }
 `;
 
 const StyledImage = styled.img`

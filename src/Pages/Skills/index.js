@@ -12,8 +12,15 @@ import {
 } from "./styles";
 
 import LanguageAndTools from "./LanguageAndTools";
+import useMediaQuery from "../../hooks/useMediaQuery";
 
 const Skills = () => {
+  const isSmallScreen = useMediaQuery("(max-width: 768px)");
+  const animationStyle = {
+    width: isSmallScreen ? "100px" : "200px",
+    height: isSmallScreen ? "100px" : "200px",
+  };
+
   const githubUrl = "https://www.github.com/shubham2270";
   const linkedinUrl = "https://www.linkedin.com/in/shubham2270";
   const vectorAnimation =
@@ -31,7 +38,7 @@ const Skills = () => {
                 src={vectorAnimation}
                 background="transparent"
                 speed="0.8"
-                style={{ width: "200px", height: "200px" }}
+                style={animationStyle}
                 loop
                 autoplay
               ></lottie-player>

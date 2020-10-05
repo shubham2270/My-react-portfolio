@@ -60,7 +60,7 @@ const Work = () => {
       <PreviousDesign />
       <SubWrapper>
         <Wrapper>
-          <Heading>Some of my personal projects for practic & fun</Heading>
+          <Heading>Some of my personal projects for practice & fun</Heading>
           <Content>
             <StyledList>
               {trail.map((props, index) => {

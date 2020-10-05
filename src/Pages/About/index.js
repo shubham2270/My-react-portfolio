@@ -43,7 +43,7 @@ const About = () => {
         {isLoading && !Error && (
           <Loader type="Circles" color={green} height={70} width={70} />
         )}
-        <TimeLine />
+        {/* <TimeLine /> */}
 
         {!Error && (
           <MyPicture

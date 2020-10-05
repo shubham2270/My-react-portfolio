@@ -12,7 +12,7 @@ const MainContainer = styled.div`
     padding: 0px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
   }
 `;
 

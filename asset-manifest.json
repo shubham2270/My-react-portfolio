@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/My-react-portfolio/static/css/main.d7d351fa.chunk.css",
-    "main.js": "/My-react-portfolio/static/js/main.eb9ed724.chunk.js",
-    "main.js.map": "/My-react-portfolio/static/js/main.eb9ed724.chunk.js.map",
+    "main.js": "/My-react-portfolio/static/js/main.1c4781e8.chunk.js",
+    "main.js.map": "/My-react-portfolio/static/js/main.1c4781e8.chunk.js.map",
     "runtime-main.js": "/My-react-portfolio/static/js/runtime-main.ef2b7ab5.js",
     "runtime-main.js.map": "/My-react-portfolio/static/js/runtime-main.ef2b7ab5.js.map",
     "static/css/2.34ca2c66.chunk.css": "/My-react-portfolio/static/css/2.34ca2c66.chunk.css",
-    "static/js/2.0d6c4c07.chunk.js": "/My-react-portfolio/static/js/2.0d6c4c07.chunk.js",
-    "static/js/2.0d6c4c07.chunk.js.map": "/My-react-portfolio/static/js/2.0d6c4c07.chunk.js.map",
+    "static/js/2.4320f8da.chunk.js": "/My-react-portfolio/static/js/2.4320f8da.chunk.js",
+    "static/js/2.4320f8da.chunk.js.map": "/My-react-portfolio/static/js/2.4320f8da.chunk.js.map",
     "index.html": "/My-react-portfolio/index.html",
-    "precache-manifest.f2a0b10dc9d610036842e0ff15976e54.js": "/My-react-portfolio/precache-manifest.f2a0b10dc9d610036842e0ff15976e54.js",
+    "precache-manifest.40a532990d77f1c4f358c12408758ff9.js": "/My-react-portfolio/precache-manifest.40a532990d77f1c4f358c12408758ff9.js",
     "service-worker.js": "/My-react-portfolio/service-worker.js",
     "static/css/2.34ca2c66.chunk.css.map": "/My-react-portfolio/static/css/2.34ca2c66.chunk.css.map",
     "static/css/main.d7d351fa.chunk.css.map": "/My-react-portfolio/static/css/main.d7d351fa.chunk.css.map",
-    "static/js/2.0d6c4c07.chunk.js.LICENSE.txt": "/My-react-portfolio/static/js/2.0d6c4c07.chunk.js.LICENSE.txt",
+    "static/js/2.4320f8da.chunk.js.LICENSE.txt": "/My-react-portfolio/static/js/2.4320f8da.chunk.js.LICENSE.txt",
     "static/media/about.b291989d.svg": "/My-react-portfolio/static/media/about.b291989d.svg",
     "static/media/astro.gif": "/My-react-portfolio/static/media/astro.669d40cc.gif",
     "static/media/astro.jpg": "/My-react-portfolio/static/media/astro.bcb1c8c0.jpg",
@@ -53,8 +53,8 @@
   "entrypoints": [
     "static/js/runtime-main.ef2b7ab5.js",
     "static/css/2.34ca2c66.chunk.css",
-    "static/js/2.0d6c4c07.chunk.js",
+    "static/js/2.4320f8da.chunk.js",
     "static/css/main.d7d351fa.chunk.css",
-    "static/js/main.eb9ed724.chunk.js"
+    "static/js/main.1c4781e8.chunk.js"
   ]
 }

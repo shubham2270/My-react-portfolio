@@ -9,6 +9,7 @@ import ProjectList from "./ProjectList";
 import ProjectCard from "./ProjectCard";
 import PreviousDesign from "./PreviousDesign";
 import useBoolean from "../../hooks/useBoolean";
+import useMediaQuery from "../../hooks/useMediaQuery";
 
 import {
   Heading,
@@ -22,6 +23,7 @@ const Work = () => {
   const [currentProject, setCurrentProject] = useState(null);
   const { value, setValue } = useBoolean(false);
   const { image, desc, url, github, gif } = currentProject || "";
+  const isSmallScreen = useMediaQuery("(max-width: 768px)");
 
   // Filter selected project from data and store in local state
   const findSelectedProject = (selectedId) => {
@@ -57,7 +59,7 @@ const Work = () => {
 
   return (
     <MainContainer>
-      <PreviousDesign />
+      {!isSmallScreen && <PreviousDesign />}
       <SubWrapper>
         <Wrapper>
           <Heading>Some of my personal projects for practice & fun</Heading>
@@ -94,6 +96,7 @@ const Work = () => {
               <VectorArt />
             </WebProjectVector>
           )}
+          <PreviousDesign />
         </Wrapper>
       </SubWrapper>
     </MainContainer>

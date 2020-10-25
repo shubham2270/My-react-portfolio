@@ -5,6 +5,7 @@ import * as color from "../../Constants/colors";
 import * as fonts from "../../Constants/fonts";
 import * as size from "../../Constants/size";
 import { device } from "../../Constants/screen";
+import { StyledLink } from "../../Components/Button/styles";
 
 const Heading = styled(animated.div)`
   color: ${color.grey};
@@ -46,6 +47,10 @@ const AboutContent = styled.div`
   width: 400px;
   @media ${device.tablet} {
     width: auto;
+    display: grid;
+    ${StyledLink} {
+      justify-self: center;
+    }
   }
 `;
 

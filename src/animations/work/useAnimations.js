@@ -2,11 +2,14 @@ import { useState } from "react";
 import { useSpring } from "react-spring";
 
 import { medium } from "../../Constants/size";
-import useBoolean from "../../hooks/useBoolean";
+import useMediaQuery from "../../hooks/useMediaQuery";
 
 const useAnimations = () => {
   const [active, setActive] = useState(false);
   const [fading, setFading] = useState(false);
+
+  const isSmallScreen = useMediaQuery("(max-width: 768px)");
+
   const textZoom = useSpring({
     from: { fontSize: medium },
     to: { fontSize: active ? "21px" : medium },
@@ -48,8 +51,10 @@ const useAnimations = () => {
     },
   });
 
+  const translateXorY = isSmallScreen ? "translateY" : "translateX";
+
   const slideInLeft = useSpring({
-    transform: fading ? "translateX(100%)" : "translateX(0%)",
+    transform: fading ? `${translateXorY}(100%)` : `${translateXorY}(0%)`,
     config: {
       duration: 250,
     },

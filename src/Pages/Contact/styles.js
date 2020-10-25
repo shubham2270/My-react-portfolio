@@ -3,9 +3,13 @@ import styled from "styled-components";
 import { Heading as aboutHeading } from "../About/styles";
 import * as colors from "../../Constants/colors";
 import hand from "../../Constants/cursor";
+import { device } from "../../Constants/screen";
 
 const Heading = styled(aboutHeading)`
   line-height: 4.5rem;
+   @media ${device.tablet} {
+   font-size: 2rem;
+   line-height: 2em;
 `;
 
 const SocialIconWrapper = styled.div`
@@ -23,6 +27,12 @@ const SocialIconWrapper = styled.div`
     fill: ${colors.green};
     width: 80px;
   }
+  @media ${device.tablet} {
+    width: 300px;
+    > a > svg {
+      width: 50px;
+    }
+  }
 `;
 
 const VectorArtWrapper = styled.div`
@@ -33,6 +43,11 @@ const VectorArtWrapper = styled.div`
     width: 600px;
     height: 300px;
   }
+    @media ${device.tablet} {
+   > svg {
+     width: 300px;
+     height: 150px;
+   }
 `;
 
 const SocialLinks = styled.div`

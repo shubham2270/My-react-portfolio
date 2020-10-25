@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import { monoCode } from "../../../Constants/fonts";
+import { device } from "../../../Constants/screen";
 
 export const SkillNameWrapper = styled.div`
   display: flex;
@@ -10,6 +11,11 @@ export const SkillNameWrapper = styled.div`
   font-family: ${monoCode};
   color: white;
   font-size: 1rem;
+  @media ${device.tablet} {
+    max-height: 200px;
+    overflow: scroll;
+    min-height: 200px;
+    justify-content: space-between;
   }
 `;
 

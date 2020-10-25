@@ -6,6 +6,7 @@ import * as size from "../../../Constants/size";
 import { primary, secondary, monoCode } from "../../../Constants/fonts";
 // import hand from "../../../Assets/cursors/hand.png";
 import hand from "../../../Constants/cursor";
+import { device } from "../../../Constants/screen";
 
 const PreviousDesignButton = styled.div`
   border: 1px solid ${color.green};
@@ -20,6 +21,14 @@ const PreviousDesignButton = styled.div`
   &:hover {
     color: ${color.white};
     border: 1px solid ${color.white};
+  }
+  @media ${device.tablet} {
+    position: initial;
+    top: 8.5em;
+    font-size: 0.8rem;
+    cursor: pointer;
+    pointer-events: none;
+    z-index: 5;
   }
 `;
 
@@ -37,6 +46,11 @@ const ContentWrapper = styled(animated.div)`
     &:nth-child(3) {
       padding-top: 12px;
     }
+  }
+  @media ${device.tablet} {
+    top: 9em;
+    overflow: visible;
+    position: initial;
   }
 `;
 

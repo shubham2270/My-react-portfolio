@@ -9,9 +9,9 @@ import { device } from "../../Constants/screen";
 const Heading = styled(aboutHeading)`
   line-height: 4rem;
   font-size: 3em;
-  @media ${device} {
+  @media ${device.tablet} {
     line-height: 2rem;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 `;
 
@@ -28,6 +28,9 @@ const StyledList = styled.ul`
     cursor: ${hand};
     margin-top: 20px;
     list-style-type: square;
+  }
+  @media ${device.tablet} {
+    height: 180px;
   }
 `;
 
@@ -49,6 +52,8 @@ const Wrapper = styled.div`
   width: 60%;
   @media ${device.tablet} {
     width: 100%;
+    max-height: 600px;
+    overflow: auto;
   }
 `;
 
@@ -66,6 +71,14 @@ const ProjectWrapper = styled(animated.div)`
   > span {
     padding-left: 4em;
     font-size: 3em;
+  }
+  @media ${device.tablet} {
+    position: initial;
+    width: auto;
+    > span {
+      padding-left: 0em;
+      font-size: 3em;
+    }
   }
 `;
 
@@ -87,6 +100,9 @@ const ProjectImage = styled(animated.div)`
   justify-content: center;
   > img {
     width: 110%;
+  }
+  @media ${device.tablet} {
+    width: auto;
   }
 `;
 
@@ -123,13 +139,6 @@ const WebProjectVector = styled(animated.div)`
   }
   @media ${device.tablet} {
     display: none;
-    /* position: absolute;
-    bottom: 1em;
-    > svg {
-      width: 100px;
-      height: 50%;
-    }
-    */
   }
 `;
 

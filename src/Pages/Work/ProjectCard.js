@@ -50,31 +50,10 @@ const ProjectCard = ({ image, desc, url, github, gif, setValue, value }) => {
     setLoader(true);
   }, [image, setLoader]);
 
-  // const loadImage = isError;
   return (
     <ProjectWrapper>
       {fading && <span role="img">{emojis[randomNumber]}</span>}{" "}
       <ProjectImage style={slideInLeft}>
-        {/* <StyledImage
-          src={require(`../../Assets/projectImages/webprojects/${image}`)}
-          alt=""
-          key={image}
-          loading={isLoading}
-          onLoad={() => {
-            setLoader(false);
-          }}
-        /> */}
-{/* 
-        {isLoading && (
-          <Loader
-            type="Circles"
-            color={green}
-            height={70}
-            width={70}
-            timeout={3000}
-          />
-        )} */}
-
         <GifBackground
           gif={require(`../../Assets/projectImages/webprojects/${gif}`)}
           onMouseEnter={() => setActive(true)}

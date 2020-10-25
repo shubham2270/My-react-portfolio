@@ -96,7 +96,7 @@ const Work = () => {
               <VectorArt />
             </WebProjectVector>
           )}
-          <PreviousDesign />
+          {isSmallScreen && <PreviousDesign />}
         </Wrapper>
       </SubWrapper>
     </MainContainer>

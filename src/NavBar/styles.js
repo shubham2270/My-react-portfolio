@@ -42,7 +42,7 @@ const NavIconsWrapper = styled.div`
     > a > svg {
       width: 30px;
       fill: ${colors.green};
-      cursor: ${hand};
+      cursor: pointer;
     }
   }
 `;

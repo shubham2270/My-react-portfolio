@@ -18,6 +18,7 @@ const Container = styled.div`
 
   @media ${tablet} {
     flex-direction: column;
+    height: auto;
   }
 `;
 

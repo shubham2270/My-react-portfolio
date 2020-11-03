@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Switch, Route, HashRouter } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 import "./styles.js";
 import { Container, Content } from "./styles";
@@ -9,7 +9,6 @@ import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Skills from "./Pages/Skills";
 import Work from "./Pages/Work";
-const cursor = require("./cursor.png");
 
 const App = () => {
   const background = document.querySelector(".background");

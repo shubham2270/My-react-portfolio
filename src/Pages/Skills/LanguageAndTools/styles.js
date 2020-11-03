@@ -12,9 +12,6 @@ export const SkillNameWrapper = styled.div`
   color: white;
   font-size: 1rem;
   @media ${device.tablet} {
-    max-height: 200px;
-    overflow: scroll;
-    min-height: 200px;
     justify-content: space-between;
   }
 `;

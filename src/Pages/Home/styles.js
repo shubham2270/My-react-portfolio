@@ -15,6 +15,7 @@ const NameContainer = styled.div`
   @media ${device.tablet} {
     flex-direction: column-reverse;
     padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 `;
 

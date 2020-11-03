@@ -52,8 +52,6 @@ const Wrapper = styled.div`
   width: 60%;
   @media ${device.tablet} {
     width: 100%;
-    max-height: 600px;
-    overflow: auto;
   }
 `;
 

@@ -45,7 +45,7 @@ const Skills = () => {
             </span>
           </AnimationWrapper>
           <Content>
-            Currently I am working as a Front end developer in{" "}
+            Have one year working experience as a Front end developer in{" "}
             <StyledLink
               href={unifizeUrl}
               target="_blank"

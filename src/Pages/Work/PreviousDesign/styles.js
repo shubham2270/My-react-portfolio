@@ -51,6 +51,7 @@ const ContentWrapper = styled(animated.div)`
     top: 9em;
     overflow: visible;
     position: initial;
+    width: auto;
   }
 `;
 

@@ -37,7 +37,7 @@ const ProjectCard = ({ image, desc, url, github, gif, setValue, value }) => {
   const emojis = ["🌟", "✨", "👾", "👀", "🤖", "😁", "🔥", "⚡", "😊", "💫"];
   const randomNumber = Math.floor(Math.random() * emojis.length);
 
-  // Put fading effect on project desciption change
+  // Put fading effect on project description change
   useEffect(() => {
     setFading(true);
     setTimeout(() => {
@@ -52,7 +52,7 @@ const ProjectCard = ({ image, desc, url, github, gif, setValue, value }) => {
 
   return (
     <ProjectWrapper>
-      {fading && <span role="img">{emojis[randomNumber]}</span>}{" "}
+      {fading && <span role="img">{emojis[randomNumber]}</span>}
       <ProjectImage style={slideInLeft}>
         <GifBackground
           gif={require(`../../Assets/projectImages/webprojects/${gif}`)}

@@ -5,7 +5,6 @@ import "@lottiefiles/lottie-player";
 import MainContainer from "../styles";
 import useAnimations from "../../animations/home/useAnimations";
 import useMediaQuery from "../../hooks/useMediaQuery";
-import tech1 from "../../animations/lottie/tech1.json";
 
 import {
   NameContainer,

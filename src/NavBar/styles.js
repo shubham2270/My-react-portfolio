@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { animated } from "react-spring";
 import { NavLink } from "react-router-dom";
 
 import * as colors from "../Constants/colors";
@@ -7,7 +8,7 @@ import { device } from "../Constants/screen";
 
 const { tablet } = device;
 
-const Nav = styled.div`
+const Nav = styled(animated.div)`
   display: grid;
   place-items: center;
   width: 5vw;
@@ -17,6 +18,7 @@ const Nav = styled.div`
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   border: 2px solid ${colors.green};
+  border-color: ${(props) => (props.highlight ? "white" : colors.green)};
   border-left: none;
 
   @media ${tablet} {

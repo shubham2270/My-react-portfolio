@@ -21,6 +21,7 @@ const App = () => {
     // loader.classList.add("loader--hide");
   };
   useEffect(hideLoader, []);
+
   return (
     <Container>
       <NavBar />

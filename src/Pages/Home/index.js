@@ -5,6 +5,7 @@ import "@lottiefiles/lottie-player";
 import MainContainer from "../styles";
 import useAnimations from "../../animations/home/useAnimations";
 import useMediaQuery from "../../hooks/useMediaQuery";
+import tech1 from "../../animations/lottie/tech1.json";
 
 import {
   NameContainer,
@@ -16,6 +17,9 @@ import {
 } from "./styles";
 
 const Home = () => {
+  
+    
+  
   const {
     nameAnimation,
     secondaryNameAnimation,
@@ -25,10 +29,18 @@ const Home = () => {
   } = useAnimations();
 
   const isSmallScreen = useMediaQuery("(max-width: 768px)");
-  const animationStyle = {
+  const childThinking = {
     width: isSmallScreen ? "200px" : "400px",
     height: isSmallScreen ? "200px" : "400px",
   };
+
+  const tech1 = {
+    width: isSmallScreen ? "150px" : "300px",
+    height: isSmallScreen ? "150px" : "300px",
+    position: "absolute",
+    bottom: isSmallScreen ? "10px" : "70px",
+    left: isSmallScreen ? "auto" : "40%"
+  }
 
   return (
     <MainContainer>
@@ -37,8 +49,8 @@ const Home = () => {
           <Intro style={introAnimation}>
             Hello, I'm
             <AnimatedSpan
-              role="img"
-              aria-label="wave hand"
+              role='img'
+              aria-label='wave hand'
               style={wavingHandAnimationDown}
             >
               👋
@@ -49,15 +61,23 @@ const Home = () => {
             &lt;{cryptAnimationText} /&gt;
           </SecondaryName>
         </div>
+        <lottie-player
+          src={"https://assets1.lottiefiles.com/packages/lf20_SGpOhb.json"}
+          background='transparent'
+          speed='0.8'
+          style={tech1}
+          loop
+          autoplay
+        />
         <AvatarWrapper>
           <lottie-player
-            src="https://assets10.lottiefiles.com/private_files/lf30_WdTEui.json"
-            background="transparent"
-            speed="0.8"
-            style={animationStyle}
+            src='https://assets10.lottiefiles.com/private_files/lf30_WdTEui.json'
+            background='transparent'
+            speed='0.8'
+            style={childThinking}
             loop
             autoplay
-          ></lottie-player>
+          />
         </AvatarWrapper>
       </NameContainer>
     </MainContainer>

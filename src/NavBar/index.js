@@ -33,7 +33,7 @@ const NavBar = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setHighlightNav(false);
-    }, 2500);
+    }, 1000);
 
     return () => {
       clearInterval(() => interval);

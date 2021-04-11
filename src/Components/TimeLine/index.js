@@ -1,44 +1,31 @@
 import React from "react";
+import Content from "./Content";
 
-import {
-  TimeLineWrapper,
-  Circle,
-  Line,
-  CircleLineWrapper,
-  TimeContent,
-  Title,
-  Description,
-  TextWrapper,
-} from "./styles";
+import { TimeLineWrapper } from "./styles";
+
+const timelineData = [
+  {
+    year: "2018",
+    description: " The year when I stared my coding journey learned HTML & CSS",
+  },
+  {
+    year: "2019",
+    description:
+      "Learned Javascript, React Js build few projects Also got my first Front End Developer job in Nov",
+  },
+  {
+    year: "2021",
+    description: "Started working in Aicrowd from January as front end dev.",
+  },
+];
 
 const TimeLine = () => {
   return (
     <TimeLineWrapper>
-      <TimeContent>
-        <CircleLineWrapper>
-          <Circle />
-          <Line />
-        </CircleLineWrapper>
-        <TextWrapper>
-          <Title>2018</Title>
-          <Description>
-            The year when I stared my coding journey learned HTML & CSS
-          </Description>
-        </TextWrapper>
-      </TimeContent>
-      <TimeContent>
-        <CircleLineWrapper>
-          <Circle />
-          <Line />
-        </CircleLineWrapper>
-        <TextWrapper>
-          <Title>2019</Title>
-          <Description>
-            Learned Javascript, React Js build few projects Also get my first
-            front end developer job in Nov
-          </Description>
-        </TextWrapper>
-      </TimeContent>
+      {timelineData.map((data) => {
+        const { year, description } = data;
+        return <Content year={year} description={description} key={year} />;
+      })}
     </TimeLineWrapper>
   );
 };

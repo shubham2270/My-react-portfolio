@@ -2,6 +2,7 @@ import React from "react";
 import Loader from "react-loader-spinner";
 
 import MainContainer from "../styles";
+import useMediaQuery from "../../hooks/useMediaQuery";
 import {
   Heading,
   Content,
@@ -20,6 +21,8 @@ const About = () => {
   const { value: Error, setValue: setError } = useBoolean(false);
   const { value: isLoading, setValue: setIsLoading } = useBoolean(true);
   const { introAnimation, nameAnimation } = useAnimations();
+
+  const isSmallScreen = useMediaQuery("(max-width: 768px)");
   return (
     <MainContainer>
       <AboutWrapper>
@@ -36,14 +39,16 @@ const About = () => {
           </Content>{" "}
           <br /> <br />
           <Button
-            link="https://drive.google.com/open?id=1qjMf_Umeb7Hd7AgYAd5BHP9_-CtyPqwU"
-            name="Resume"
+            link='https://drive.google.com/open?id=1qjMf_Umeb7Hd7AgYAd5BHP9_-CtyPqwU'
+            name='Resume'
           />
         </AboutContent>
         {isLoading && !Error && (
-          <Loader type="Circles" color={green} height={70} width={70} />
+          <Loader type='Circles' color={green} height={70} width={70} />
         )}
-        {/* <TimeLine /> */}
+
+        {/* Hide on small screens */}
+        {!isSmallScreen && <TimeLine />}
 
         {!Error && (
           <MyPicture

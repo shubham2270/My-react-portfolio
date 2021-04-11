@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useTrail, useSpring, animated } from "react-spring";
+import { useTrail, useSpring } from "react-spring";
 
 import MainContainer from "../styles";
 import { Content } from "../About/styles";

@@ -26,6 +26,7 @@ const Skills = () => {
   const vectorAnimation =
     "https://assets2.lottiefiles.com/packages/lf20_snxqzipw.json";
   const unifizeUrl = "https://www.unifize.com/";
+  const aicrowdUrl = "https://www.aicrowd.com";
 
   return (
     <MainContainer>
@@ -36,8 +37,8 @@ const Skills = () => {
             <span>
               <lottie-player
                 src={vectorAnimation}
-                background="transparent"
-                speed="0.8"
+                background='transparent'
+                speed='0.8'
                 style={animationStyle}
                 loop
                 autoplay
@@ -45,31 +46,39 @@ const Skills = () => {
             </span>
           </AnimationWrapper>
           <Content>
-            Have one year working experience as a Front end developer in{" "}
+            Currently working as Front End Developer in{" "}
+            <StyledLink
+              href={aicrowdUrl}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              Aicrowd
+            </StyledLink>{" "}
+            using Next Js, Redux-saga, etc as main library. Previously worked in{" "}
             <StyledLink
               href={unifizeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              target='_blank'
+              rel='noopener noreferrer'
             >
               Unifize
             </StyledLink>{" "}
-            a start up, using React Js, Redux, styled components etc , as main
-            library and tools.
+            one year as a Front end developer used React Js, Redux, styled
+            components etc , as main library and tools.
             <br /> <br />
             Beside I keep working on some side projects either for learning new
             things or just for fun, Checkout my{" "}
             <StyledLink
               href={githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              target='_blank'
+              rel='noopener noreferrer'
             >
               Github
             </StyledLink>{" "}
             &{" "}
             <StyledLink
               href={linkedinUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              target='_blank'
+              rel='noopener noreferrer'
             >
               Linkedin{" "}
             </StyledLink>{" "}

@@ -12,19 +12,19 @@ const NavBar = () => {
   return (
     <Nav>
       <NavIconsWrapper>
-        <StyledLink exact to="/">
+        <StyledLink exact to='/'>
           <HomeLogo />
         </StyledLink>
-        <StyledLink to="/about">
+        <StyledLink to='/about'>
           <AboutLogo />
         </StyledLink>
-        <StyledLink to="/skills">
+        <StyledLink to='/skills'>
           <SkillsLogo />
         </StyledLink>
-        <StyledLink to="/work">
+        <StyledLink to='/work'>
           <WorkLogo />
         </StyledLink>
-        <StyledLink to="/contact">
+        <StyledLink to='/contact'>
           <EmailLogo />
         </StyledLink>
       </NavIconsWrapper>

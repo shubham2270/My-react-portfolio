@@ -11,29 +11,41 @@ const Nav = styled.div`
   display: grid;
   place-items: center;
   width: 5vw;
-  height: 100%;
+  height: 45%;
+  align-self: center;
   background: ${colors.grey};
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 2px solid ${colors.green};
+  border-left: none;
 
   @media ${tablet} {
     height: 50px;
-    width: 100%;
+    width: 90%;
     position: fixed;
     z-index: 2;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0px;
+    border: 2px solid ${colors.green};
+    border-right: 2px solid ${colors.green};
+    border-top: none;
   }
 `;
 
 const NavIconsWrapper = styled.div`
   width: 60px;
-  height: 45%;
+  height: 80%;
   display: grid;
   place-items: center;
   > a {
     cursor: ${hand};
   }
   > a > svg {
-    width: 28px;
+    width: 35px;
     fill: ${colors.green};
     cursor: ${hand};
+    font-weight: bold;
   }
   @media ${tablet} {
     height: 50px;

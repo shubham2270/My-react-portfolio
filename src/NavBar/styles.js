@@ -20,6 +20,8 @@ const Nav = styled(animated.div)`
   border: 2px solid ${colors.green};
   border-color: ${(props) => (props.highlight ? "white" : colors.green)};
   border-left: none;
+  box-shadow: 0px 0px 20px black;
+  
 
   @media ${tablet} {
     height: 50px;
@@ -64,6 +66,9 @@ const NavIconsWrapper = styled.div`
 `;
 
 const StyledLink = styled(NavLink)`
+  position: relative;
+  /* background-color: grey; */
+  /* width: 100%; */
   &.active {
     > svg {
       fill: ${colors.white};
@@ -71,4 +76,16 @@ const StyledLink = styled(NavLink)`
   }
 `;
 
-export { Nav, NavIconsWrapper, StyledLink };
+const Text = styled(animated.div)`
+  color: ${colors.green};
+  font-size: 1rem;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  transform: rotate(-90deg);
+  position: absolute;
+  left: 23px;
+  top: -20px;
+  opacity: 0;
+`;
+
+export { Nav, NavIconsWrapper, StyledLink, Text };

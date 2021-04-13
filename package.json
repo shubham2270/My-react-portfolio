@@ -1,7 +1,7 @@
 {
   "name": "my-react-portfolio",
   "version": "0.1.0",
-  "homepage": "http://shubham2270.github.io/My-react-portfolio/",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@lottiefiles/lottie-player": "^0.5.1",

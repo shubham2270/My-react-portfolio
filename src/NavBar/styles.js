@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { animated } from "react-spring";
-import { NavLink } from "react-router-dom";
+import Link from "next/link";
 
 import * as colors from "../Constants/colors";
 import hand from "../Constants/cursor";
@@ -21,7 +21,6 @@ const Nav = styled(animated.div)`
   border-color: ${(props) => (props.highlight ? "white" : colors.green)};
   border-left: none;
   box-shadow: 0px 0px 20px black;
-  
 
   @media ${tablet} {
     height: 50px;
@@ -65,7 +64,7 @@ const NavIconsWrapper = styled.div`
   }
 `;
 
-const StyledLink = styled(NavLink)`
+const StyledLink = styled(Link)`
   position: relative;
   /* background-color: grey; */
   /* width: 100%; */

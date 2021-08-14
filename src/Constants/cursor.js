@@ -1,4 +1,4 @@
-import yellowPointer from "../Assets/cursors/yellowPointer.png";
+const yellowPointer = "/assets/cursors/yellowPointer.png";
 
 const hand = `url(${yellowPointer}), auto;`;
 

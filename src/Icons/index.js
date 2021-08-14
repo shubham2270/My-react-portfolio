@@ -1,15 +1,15 @@
 import React from "react";
 
-import { ReactComponent as Html } from "../Assets/Icons/dev/html.svg";
-import { ReactComponent as Css } from "../Assets/Icons/dev/css.svg";
-import { ReactComponent as Javascript } from "../Assets/Icons/dev/javascript.svg";
-import { ReactComponent as ReactIcon } from "../Assets/Icons/dev/react.svg";
-import { ReactComponent as Redux } from "../Assets/Icons/dev/redux.svg";
-import { ReactComponent as ReduxSaga } from "../Assets/Icons/dev/reduxSaga.svg";
-import { ReactComponent as StyledComponent } from "../Assets/Icons/dev/styledComponents.svg";
-import { ReactComponent as Flow } from "../Assets/Icons/dev/flow.svg";
-import { ReactComponent as Git } from "../Assets/Icons/dev/git.svg";
-import { ReactComponent as VsCode } from "../Assets/Icons/dev/vscode.svg";
+import Html from "../iconFile/dev/html.svg";
+import Css from "../iconFile/dev/css.svg";
+import Javascript from "../iconFile/dev/javascript.svg";
+import ReactIcon from "../iconFile/dev/react.svg";
+import Redux from "../iconFile/dev/redux.svg";
+import ReduxSaga from "../iconFile/dev/reduxSaga.svg";
+import StyledComponent from "../iconFile/dev/styledComponents.svg";
+import Flow from "../iconFile/dev/flow.svg";
+import Git from "../iconFile/dev/git.svg";
+import VsCode from "../iconFile/dev/vscode.svg";
 
 const Icons = ({ type }) => {
   switch (type) {

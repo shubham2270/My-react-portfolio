@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 import { Heading as aboutHeading } from "../about/styles";
-import * as fonts from "../../Constants/fonts";
-import { green } from "../../Constants/colors";
-import hand from "../../Constants/cursor";
-import { device } from "../../Constants/screen";
+import * as fonts from "../../../Constants/fonts";
+import { green } from "../../../Constants/colors";
+import hand from "../../../Constants/cursor";
+import { device } from "../../../Constants/screen";
 
 const Heading = styled(aboutHeading)`
   line-height: 4.5rem;

@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import { animated } from "react-spring";
 
-import * as color from "../../Constants/colors";
-import * as fonts from "../../Constants/fonts";
-import * as size from "../../Constants/size";
-import { device } from "../../Constants/screen";
-import { StyledLink } from "../../Components/Button/styles";
+import * as color from "../../../Constants/colors";
+import * as fonts from "../../../Constants/fonts";
+import * as size from "../../../Constants/size";
+import { device } from "../../../Constants/screen";
+import { StyledLink } from "../../Button/styles";
 
 const Heading = styled(animated.div)`
   color: ${color.grey};

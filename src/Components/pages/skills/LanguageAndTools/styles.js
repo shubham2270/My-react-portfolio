@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-import { monoCode } from "../../../Constants/fonts";
-import { device } from "../../../Constants/screen";
+import { monoCode } from "../../../../Constants/fonts";
+import { device } from "../../../../Constants/screen";
 
 export const SkillNameWrapper = styled.div`
   display: flex;

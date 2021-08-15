@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-import useBoolean from "../../../hooks/useBoolean";
-import useAnimations from "../../../animations/work/useAnimations";
+import useBoolean from "../../../../hooks/useBoolean";
+import useAnimations from "../../../../animations/work/useAnimations";
 import {
   PreviousDesignButton,
   ContentWrapper,
@@ -9,7 +9,7 @@ import {
   Info,
   Code,
 } from "./styles";
-import useMediaQuery from "../../../hooks/useMediaQuery";
+import useMediaQuery from "../../../../hooks/useMediaQuery";
 
 const PreviousDesign = () => {
   const { toggle, value: modal } = useBoolean(false);

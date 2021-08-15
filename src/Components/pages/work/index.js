@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useTrail, useSpring } from "react-spring";
 
-import MainContainer from "../styles";
+import MainContainer from "../../styles";
 import { Content } from "../about/styles";
-import VectorArt from "../../iconFile/Vector/webproject.svg";
+import VectorArt from "../../../iconFile/Vector/webproject.svg";
 import ProjectList from "./ProjectList";
 import ProjectCard from "./ProjectCard";
 import PreviousDesign from "./PreviousDesign";
-import useBoolean from "../../hooks/useBoolean";
-import useMediaQuery from "../../hooks/useMediaQuery";
+import useBoolean from "../../../hooks/useBoolean";
+import useMediaQuery from "../../../hooks/useMediaQuery";
 import { projectData } from "./projectData";
 
 import {
@@ -20,11 +20,20 @@ import {
 } from "./styles";
 
 const Work = () => {
-  console.log(projectData);
   const [currentProject, setCurrentProject] = useState(null);
   const { value, setValue } = useBoolean(false);
   const { image, desc, url, github, gif } = currentProject || "";
   const isSmallScreen = useMediaQuery("(max-width: 768px)");
+
+  const svgRef = useRef();
+
+  useEffect(() => {
+    const svg = svgRef?.current;
+
+    console.log(svgRef);
+
+    // svg.setAttribute('viewBox="0 0 1116 589.03666"');
+  });
 
   // Filter selected project from data and store in local state
   const findSelectedProject = (selectedId) => {

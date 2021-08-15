@@ -1,7 +1,6 @@
-import React from "react";
-// import "@lottiefiles/lottie-player";
+import React, { useEffect } from "react";
 
-import MainContainer from "../styles";
+import MainContainer from "../../styles";
 import { Content } from "../about/styles";
 import {
   Heading,
@@ -12,7 +11,7 @@ import {
 } from "./styles";
 
 import LanguageAndTools from "./LanguageAndTools";
-import useMediaQuery from "../../hooks/useMediaQuery";
+import useMediaQuery from "../../../hooks/useMediaQuery";
 
 const Skills = () => {
   const isSmallScreen = useMediaQuery("(max-width: 768px)");
@@ -28,6 +27,10 @@ const Skills = () => {
   const unifizeUrl = "https://www.unifize.com/";
   const aicrowdUrl = "https://www.aicrowd.com";
 
+  useEffect(() => {
+    import("@lottiefiles/lottie-player");
+  });
+
   return (
     <MainContainer>
       <SkillWrapper>
@@ -35,14 +38,14 @@ const Skills = () => {
           <AnimationWrapper>
             <Heading>Skills & Experience</Heading>
             <span>
-              {/* <lottie-player
+              <lottie-player
                 src={vectorAnimation}
                 background='transparent'
                 speed='0.8'
                 style={animationStyle}
                 loop
                 autoplay
-              ></lottie-player> */}
+              ></lottie-player>
             </span>
           </AnimationWrapper>
           <Content>

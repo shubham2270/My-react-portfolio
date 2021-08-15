@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 import { Heading as aboutHeading } from "../about/styles";
-import * as colors from "../../Constants/colors";
-import hand from "../../Constants/cursor";
-import { device } from "../../Constants/screen";
+import * as colors from "../../../Constants/colors";
+import hand from "../../../Constants/cursor";
+import { device } from "../../../Constants/screen";
 
 const Heading = styled(aboutHeading)`
   line-height: 4.5rem;
@@ -20,7 +20,7 @@ const SocialIconWrapper = styled.div`
   > a {
     cursor: ${hand};
   }
-  > a > svg > g > g {
+  > a > svg > g {
     stroke: ${colors.green};
   }
   > a > svg {
@@ -40,13 +40,11 @@ const VectorArtWrapper = styled.div`
   justify-content: flex-end;
   align-items: center;
   > svg {
-    width: 600px;
-    height: 300px;
+   transform: scale(0.7);
   }
     @media ${device.tablet} {
    > svg {
-     width: 300px;
-     height: 150px;
+    transform: scale(0.3);
    }
 `;
 

@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import { animated } from "react-spring";
 
-import * as color from "../../../Constants/colors";
-import * as size from "../../../Constants/size";
-import { primary, secondary, monoCode } from "../../../Constants/fonts";
+import * as color from "../../../../Constants/colors";
+import * as size from "../../../../Constants/size";
+import { primary, secondary, monoCode } from "../../../../Constants/fonts";
 // import hand from "../../../assets/cursors/hand.png";
-import hand from "../../../Constants/cursor";
-import { device } from "../../../Constants/screen";
+import hand from "../../../../Constants/cursor";
+import { device } from "../../../../Constants/screen";
 
 const PreviousDesignButton = styled.div`
   border: 1px solid ${color.green};

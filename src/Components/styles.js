@@ -9,11 +9,13 @@ const MainContainer = styled.div`
   padding-left: 8em;
 
   @media ${device.tablet} {
+    height: 100vh;
     padding: 0px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     padding-top: 50px;
+    overflow: scroll;
   }
 `;
 

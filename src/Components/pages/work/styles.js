@@ -2,9 +2,9 @@ import styled, { css } from "styled-components";
 import { animated } from "react-spring";
 
 import { Heading as aboutHeading } from "../about/styles";
-import * as color from "../../Constants/colors";
-import hand from "../../Constants/cursor";
-import { device } from "../../Constants/screen";
+import * as color from "../../../Constants/colors";
+import hand from "../../../Constants/cursor";
+import { device } from "../../../Constants/screen";
 
 const Heading = styled(aboutHeading)`
   line-height: 4rem;
@@ -129,11 +129,10 @@ const ProjectInfo = styled(animated.div)`
 
 const WebProjectVector = styled(animated.div)`
   position: absolute;
-  right: 7em;
-  top: 8em;
+  right: 29em;
+  top: 4em;
   > svg {
-    width: 500px;
-    height: 50%;
+    transform: scale(0.7);
   }
   @media ${device.tablet} {
     display: none;

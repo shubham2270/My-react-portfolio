@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
-import MainContainer from "../styles";
+import MainContainer from "../../styles";
 import { Heading } from "./styles";
-import GihubLogo from "../../iconFile/social/github.svg";
-import LinkedinLogo from "../../iconFile/social/linkedin.svg";
-import TwitterLogo from "../../iconFile/social/twitter.svg";
-import EmailLogo from "../../iconFile/social/email.svg";
-import VectorArt from "../../iconFile/Vector/social.svg";
+import GihubLogo from "../../../iconFile/social/github.svg";
+import LinkedinLogo from "../../../iconFile/social/linkedin.svg";
+import TwitterLogo from "../../../iconFile/social/twitter.svg";
+import EmailLogo from "../../../iconFile/social/email.svg";
+import VectorArt from "../../../iconFile/Vector/social.svg";
 
 import {
   SocialIconWrapper,

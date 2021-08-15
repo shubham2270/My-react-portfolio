@@ -20,7 +20,30 @@ const Icons = ({ type }) => {
     case "javascript":
       return <Javascript />;
     case "reactIcon":
-      return <ReactIcon />;
+      return (
+        <img
+          width='40px'
+          style={{ marginLeft: "-8px" }}
+          src={
+            "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+          }
+        ></img>
+      );
+    case "nextjs":
+      return (
+        <img
+          width='40px'
+          style={{
+            marginLeft: "-8px",
+            background: "white",
+            padding: "3px",
+            marginRight: "3px",
+          }}
+          src={
+            "https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg"
+          }
+        ></img>
+      );
     case "redux":
       return <Redux />;
     case "reduxSaga":

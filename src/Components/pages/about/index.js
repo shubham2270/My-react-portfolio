@@ -1,8 +1,9 @@
 import React from "react";
 import Loader from "react-loader-spinner";
+import Image from "next/image";
 
-import MainContainer from "../styles";
-import useMediaQuery from "../../hooks/useMediaQuery";
+import MainContainer from "../../styles";
+import useMediaQuery from "../../../hooks/useMediaQuery";
 import {
   Heading,
   Content,
@@ -10,14 +11,13 @@ import {
   MyPicture,
   AboutContent,
 } from "./styles";
-import Button from "../../Components/Button";
-import useBoolean from "../../hooks/useBoolean";
-import { green } from "../../Constants/colors";
-import useAnimations from "../../animations/home/useAnimations";
-import TimeLine from "../../Components/TimeLine/index";
+import Button from "../../Button";
+import useBoolean from "../../../hooks/useBoolean";
+import { green } from "../../../Constants/colors";
+import useAnimations from "../../../animations/home/useAnimations";
+import TimeLine from "../../TimeLine/index";
 
 const About = () => {
-  const shubham = "/assets/shubham.jpg";
   const { value: Error, setValue: setError } = useBoolean(false);
   const { value: isLoading, setValue: setIsLoading } = useBoolean(true);
   const { introAnimation, nameAnimation } = useAnimations();
@@ -50,14 +50,33 @@ const About = () => {
         {/* Hide on small screens */}
         {!isSmallScreen && <TimeLine />}
 
-        {!Error && (
-          <MyPicture
-            style={nameAnimation}
+        {/* {!Error && (
+          <Image
             src={shubham}
             onLoad={() => setIsLoading(false)}
             onError={() => setError(true)}
+            width={200}
+            height={400}
+            layout='responsive'
           />
-        )}
+          // <MyPicture
+          //   style={nameAnimation}
+          //   src={shubham}
+          //   onLoad={() => setIsLoading(false)}
+          //   onError={() => setError(true)}
+          // />
+        )} */}
+
+        <div style={{ maxWidth: "500px", width: "100%", display: "block" }}>
+          <Image
+            src='/assets/shubham.jpg'
+            onLoad={() => setIsLoading(false)}
+            // onError={() => setError(true)}
+            width={500}
+            height={500}
+            layout='responsive'
+          />
+        </div>
       </AboutWrapper>
     </MainContainer>
   );

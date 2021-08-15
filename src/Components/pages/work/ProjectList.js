@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { animated } from "react-spring";
 
 import { ListWrapper } from "./styles";
-import useAnimations from "../../animations/work/useAnimations";
+import useAnimations from "../../../animations/work/useAnimations";
 
 const ProjectList = ({
   findSelectedProject,

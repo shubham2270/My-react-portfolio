@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { animated } from "react-spring";
 
-import * as color from "../Constants/colors";
-import * as fonts from "../Constants/fonts";
-import * as size from "../Constants/size";
-import { device } from "../Constants/screen";
+import * as color from "../../../Constants/colors";
+import * as fonts from "../../../Constants/fonts";
+import * as size from "../../../Constants/size";
+import { device } from "../../../Constants/screen";
 
 const NameContainer = styled.div`
   display: flex;

@@ -13,10 +13,10 @@ import {
   Slider,
   DecorativeGif,
 } from "./styles";
-import useBoolean from "../../hooks/useBoolean";
-import useAnimations from "../../animations/work/useAnimations";
-import GithubLogo from "../../iconFile/social/githubProject.svg";
-import BrowserLogo from "../../iconFile/social/browser.svg";
+import useBoolean from "../../../hooks/useBoolean";
+import useAnimations from "../../../animations/work/useAnimations";
+import GithubLogo from "../../../iconFile/social/githubProject.svg";
+import BrowserLogo from "../../../iconFile/social/browser.svg";
 
 const ProjectCard = ({ image, desc, url, github, gif, setValue, value }) => {
   // const { value: isError, setValue: setError } = useBoolean(false);

@@ -43,9 +43,6 @@ const About = () => {
             name='Resume'
           />
         </AboutContent>
-        {isLoading && !Error && (
-          <Loader type='Circles' color={green} height={70} width={70} />
-        )}
 
         {/* Hide on small screens */}
         {!isSmallScreen && <TimeLine />}
@@ -67,7 +64,18 @@ const About = () => {
           // />
         )} */}
 
-        <div style={{ maxWidth: "500px", width: "100%", display: "block" }}>
+        <div
+          style={{
+            maxWidth: "500px",
+            width: "100%",
+            // display: "block",
+            display: isLoading ? "grid" : "block",
+            placeItems: "center",
+          }}
+        >
+          {isLoading && !Error && (
+            <Loader type='Circles' color={green} height={70} width={70} />
+          )}
           <Image
             src='/assets/shubham.jpg'
             onLoad={() => setIsLoading(false)}

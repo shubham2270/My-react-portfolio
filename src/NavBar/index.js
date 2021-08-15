@@ -112,11 +112,11 @@ const NavBar = () => {
               </a>
             </StyledLink>
           );
+
           {
-            /* 
-              {!isSmallScreen && (
-                <Text style={currentNav === name ? slide : {}}>{name}</Text>
-              )} */
+            !isSmallScreen && (
+              <Text style={currentNav === name ? slide : {}}>{name}</Text>
+            );
           }
         })}
       </NavIconsWrapper>

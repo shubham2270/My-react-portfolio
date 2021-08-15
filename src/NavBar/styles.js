@@ -69,8 +69,9 @@ const StyledLink = styled(Link)`
   /* background-color: grey; */
   /* width: 100%; */
   &.active {
-    > svg {
+    > a > svg {
       fill: ${colors.white};
+      background-color: red;
     }
   }
 `;

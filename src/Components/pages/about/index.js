@@ -29,13 +29,21 @@ const About = () => {
         <AboutContent>
           <Heading style={introAnimation}>About me</Heading>
           <Content style={nameAnimation}>
-            I am a self-taught developer from India. My goal is to build
+            Since 2019, I&apos;ve been working as a front-end developer. I've
+            always been someone who can think creatively as well as logically.
+            <p>
+              I&apos;ve taken an Arena Animation visual web design and
+              development course, as well as online Full Stack Web Development
+              course, so that I can advance my web development skills while also
+              learning new technologies.
+            </p>
+            {/* I am a self-taught developer from India. My goal is to build
             full-stack websites and web applications using modern web
             technologies.
             <br /> <br />I have done Graphic web design/Development course from
             Arena Animation and also taken Full Stack Web Development course
             available online so that I can take my web skills to next level and
-            also keep learning new technologies.
+            also keep learning new technologies. */}
           </Content>{" "}
           <br /> <br />
           <Button

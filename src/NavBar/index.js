@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useCallback } from "react";
+import { useRouter } from "next/router";
 import { useSpring } from "react-spring";
 
 import HomeLogo from "../iconFile/home.svg";
@@ -12,6 +13,8 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import { Nav, NavIconsWrapper, StyledLink, Text } from "./styles";
 
 const NavBar = () => {
+  const router = useRouter();
+  const { pathname } = router;
   const isSmallScreen = useMediaQuery("(max-width: 768px)");
   const [highlightNav, setHighlightNav] = useState(false);
   const [showText, setShowText] = useState(false);
@@ -22,26 +25,31 @@ const NavBar = () => {
       name: "home",
       path: "/",
       icon: HomeLogo,
+      active: pathname === "/",
     },
     {
       name: "about",
       path: "/about",
       icon: AboutLogo,
+      active: pathname === "/about",
     },
     {
       name: "skills",
       path: "/skills",
       icon: SkillsLogo,
+      active: pathname === "/skills",
     },
     {
       name: "work",
       path: "/work",
       icon: WorkLogo,
+      active: pathname === "/work",
     },
     {
       name: "contact",
       path: "/contact",
       icon: EmailLogo,
+      active: pathname === "/contact",
     },
   ];
 
@@ -91,24 +99,31 @@ const NavBar = () => {
     <Nav style={glow}>
       <NavIconsWrapper>
         {navItems.map((item) => {
-          const { path, name, icon } = item;
+          const { path, name, icon, active } = item;
           return (
-            <StyledLink
-              key={name}
-              href={path}
-              onMouseEnter={() => onMouseEnterHandler(name)}
-              onMouseLeave={() => setShowText(false)}
-              passHref
-            >
+            <StyledLink key={name} href={path} passHref>
               {/* <a>
                 <HomeLogo />
               </a> */}
-              <a>
-                {name === "home" && <HomeLogo />}
-                {name === "about" && <AboutLogo />}
-                {name === "skills" && <SkillsLogo />}
-                {name === "work" && <WorkLogo />}
-                {name === "contact" && <EmailLogo />}
+              <a
+                onMouseEnter={() => onMouseEnterHandler(name)}
+                onMouseLeave={() => setShowText(false)}
+              >
+                {name === "home" && (
+                  <HomeLogo style={{ fill: active && "white" }} />
+                )}
+                {name === "about" && (
+                  <AboutLogo style={{ fill: active && "white" }} />
+                )}
+                {name === "skills" && (
+                  <SkillsLogo style={{ fill: active && "white" }} />
+                )}
+                {name === "work" && (
+                  <WorkLogo style={{ fill: active && "white" }} />
+                )}
+                {name === "contact" && (
+                  <EmailLogo style={{ fill: active && "white" }} />
+                )}
               </a>
             </StyledLink>
           );

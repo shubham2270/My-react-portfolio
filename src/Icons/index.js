@@ -10,6 +10,8 @@ import StyledComponent from "../iconFile/dev/styledComponents.svg";
 import Flow from "../iconFile/dev/flow.svg";
 import Git from "../iconFile/dev/git.svg";
 import VsCode from "../iconFile/dev/vscode.svg";
+import Typescript from "../iconFile/dev/typescript.svg";
+import Storybook from "../iconFile/dev/storybook.svg";
 
 const Icons = ({ type }) => {
   switch (type) {
@@ -56,6 +58,10 @@ const Icons = ({ type }) => {
       return <Git />;
     case "vsCode":
       return <VsCode />;
+    case "typescript":
+      return <Typescript />;
+    case "storybook":
+      return <Storybook />;
     default:
       return "";
   }

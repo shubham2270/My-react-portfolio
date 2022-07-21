@@ -73,6 +73,20 @@ const LanguageAndTools = () => {
         "linear-gradient(34deg, rgba(219,73,39,1) 0%, rgba(195,65,35,1) 35%, rgba(243,79,41,1) 100%)",
     },
     {
+      name: "TypeScript",
+      icon: "typescript",
+      fallbackColor: "rgb(30,117,176)",
+      background:
+        "linear-gradient(34deg, rgba(30,117,176,1) 0%, rgba(29,107,159,1) 35%, rgba(37,141,211,1) 100%)",
+    },
+    {
+      name: "Storybook",
+      icon: "storybook",
+      fallbackColor: "rgb(30,117,176)",
+      background:
+        "linear-gradient(34deg, #d62f6a 0%, #cf3469 35%, #eb5287 100%)",
+    },
+    {
       name: "Vs Code",
       icon: "vsCode",
       fallbackColor: "rgb(30,117,176)",

@@ -31,10 +31,10 @@ const Home = () => {
   };
 
   const tech1 = {
-    width: isSmallScreen ? "150px" : "300px",
-    height: isSmallScreen ? "150px" : "300px",
+    width: isSmallScreen ? "150px" : "700px",
+    height: isSmallScreen ? "150px" : "auto",
     position: "absolute",
-    bottom: isSmallScreen ? "10px" : "70px",
+    bottom: isSmallScreen ? "10px" : "10px",
     left: isSmallScreen ? "auto" : "40%",
   };
 
@@ -61,17 +61,17 @@ const Home = () => {
             &lt;{cryptAnimationText} /&gt;
           </SecondaryName>
         </div>
-        <lottie-player
-          src={"https://assets1.lottiefiles.com/packages/lf20_SGpOhb.json"}
+        {/* <lottie-player
+          src={"/assets/lottie/tech1.json"}
           background='transparent'
           speed='0.8'
           style={tech1}
           loop
           autoplay
-        />
+        /> */}
         <AvatarWrapper>
           <lottie-player
-            src='https://assets10.lottiefiles.com/private_files/lf30_WdTEui.json'
+            src='/assets/lottie/boyCoding.json'
             background='transparent'
             speed='0.8'
             style={childThinking}

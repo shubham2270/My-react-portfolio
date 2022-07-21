@@ -40,12 +40,14 @@ const VectorArtWrapper = styled.div`
   justify-content: flex-end;
   align-items: center;
   > svg {
-   transform: scale(0.7);
+    transform: scale(0.7);
   }
-    @media ${device.tablet} {
-   > svg {
-    transform: scale(0.3);
-   }
+  @media ${device.tablet} {
+    justify-content: flex-start;
+    > svg {
+      transform: scale(0.3);
+    }
+  }
 `;
 
 const SocialLinks = styled.div`

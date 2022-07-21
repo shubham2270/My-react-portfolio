@@ -55,9 +55,9 @@ const Skills = () => {
               target='_blank'
               rel='noopener noreferrer'
             >
-              Aicrowd
+              AIcrowd
             </StyledLink>{" "}
-            using Next Js, Redux-saga, etc as main library. Previously worked in{" "}
+            using Next Js, SWR, etc as main library. Previously worked in{" "}
             <StyledLink
               href={unifizeUrl}
               target='_blank'

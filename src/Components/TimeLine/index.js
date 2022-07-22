@@ -6,16 +6,17 @@ import { TimeLineWrapper } from "./styles";
 const timelineData = [
   {
     year: "2018",
-    description: " The year when I stared my coding journey learned HTML & CSS",
+    description:
+      " The year when I started my coding journey learned HTML & CSS",
   },
   {
     year: "2019",
     description:
-      "Learned Javascript, React Js build few projects Also got my first Front End Developer job in Nov",
+      "Learned Javascript, React Js build few projects also got my first Front End Developer job in Nov",
   },
   {
     year: "2021",
-    description: "Started working in Aicrowd from January as front end dev.",
+    description: "Started working in AIcrowd from January as front end dev.",
   },
 ];
 

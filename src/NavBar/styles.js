@@ -27,12 +27,14 @@ const Nav = styled(animated.div)`
     width: 100%;
     position: fixed;
     z-index: 2;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-top-right-radius: 0px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 0px;
     border: 2px solid ${colors.green};
     border-right: 2px solid ${colors.green};
-    border-top: none;
+    border-bottom: none;
+    bottom: 0px;
   }
 `;
 

@@ -19,6 +19,7 @@ const Container = styled.div`
   @media ${tablet} {
     flex-direction: column;
     height: auto;
+    height: calc(100vh + 300px);
   }
 `;
 

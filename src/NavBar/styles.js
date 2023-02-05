@@ -11,7 +11,6 @@ const { tablet } = device;
 const Nav = styled(animated.div)`
   display: grid;
   place-items: center;
-  width: 5vw;
   height: 45%;
   align-self: center;
   background: ${colors.grey};
@@ -21,10 +20,11 @@ const Nav = styled(animated.div)`
   border-color: ${(props) => (props.highlight ? "white" : colors.green)};
   border-left: none;
   box-shadow: 0px 0px 20px black;
+  max-width: 500px;
 
   @media ${tablet} {
     height: 50px;
-    width: 90%;
+    width: 100%;
     position: fixed;
     z-index: 2;
     border-bottom-right-radius: 10px;

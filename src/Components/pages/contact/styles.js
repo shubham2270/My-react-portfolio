@@ -27,13 +27,8 @@ const SocialIconWrapper = styled.div`
     fill: ${colors.green};
     width: 80px;
   }
+
   @media ${device.tablet} {
-    width: 300px;
-    > a > svg {
-      width: 50px;
-    }
-  }
-  @media ${device.mobileL} {
     width: 270px;
     > a > svg {
       width: 100px;
@@ -56,13 +51,8 @@ const VectorArtWrapper = styled.div`
   > svg {
     transform: scale(0.7);
   }
+
   @media ${device.tablet} {
-    justify-content: flex-start;
-    > svg {
-      transform: scale(0.3);
-    }
-  }
-  @media ${device.mobileL} {
     display: block;
     justify-content: flex-start;
     > svg {

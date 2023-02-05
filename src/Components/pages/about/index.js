@@ -13,7 +13,7 @@ import {
 } from "./styles";
 import Button from "../../Button";
 import useBoolean from "../../../hooks/useBoolean";
-import { green } from "../../../Constants/colors";
+import { green, grey } from "../../../Constants/colors";
 import useAnimations from "../../../animations/home/useAnimations";
 import TimeLine from "../../TimeLine/index";
 
@@ -74,22 +74,26 @@ const About = () => {
 
         <div
           style={{
-            maxWidth: "500px",
+            maxWidth: isSmallScreen ? "300px" : "450px",
             width: "100%",
             // display: "block",
-            display: isLoading ? "grid" : "block",
+            display: isLoading ? "flex" : "block",
+            justifyContent: "center",
+            height: isLoading ? "450px" : "auto",
             placeItems: "center",
+            border: `2px solid ${green}`,
+            marginTop: isSmallScreen ? "20px" : "initial",
           }}
         >
           {isLoading && !Error && (
             <Loader type='Circles' color={green} height={70} width={70} />
           )}
           <Image
-            src='/assets/shubham.jpg'
+            src='/assets/me.png'
             onLoad={() => setIsLoading(false)}
             // onError={() => setError(true)}
-            width={500}
-            height={500}
+            width={450}
+            height={450}
             layout='responsive'
           />
         </div>

@@ -26,6 +26,7 @@ const Skills = () => {
     "https://assets2.lottiefiles.com/packages/lf20_snxqzipw.json";
   const unifizeUrl = "https://www.unifize.com/";
   const aicrowdUrl = "https://www.aicrowd.com";
+  const zuddlUrl = "https://www.zuddl.com";
 
   useEffect(() => {
     import("@lottiefiles/lottie-player");
@@ -51,13 +52,22 @@ const Skills = () => {
           <Content>
             Currently working as Front End Developer in{" "}
             <StyledLink
+              href={zuddlUrl}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              Zuddl
+            </StyledLink>{" "}
+            using React Js, React Query, etc as main library. Previously worked
+            in{" "}
+            <StyledLink
               href={aicrowdUrl}
               target='_blank'
               rel='noopener noreferrer'
             >
               AIcrowd
             </StyledLink>{" "}
-            using Next Js, SWR, etc as main library. Previously worked in{" "}
+            using Next Js, SWR, etc as main library. Also worked in{" "}
             <StyledLink
               href={unifizeUrl}
               target='_blank'

@@ -33,6 +33,20 @@ const SocialIconWrapper = styled.div`
       width: 50px;
     }
   }
+  @media ${device.mobileL} {
+    width: 270px;
+    > a > svg {
+      width: 100px;
+    }
+    > a {
+      width: 50px;
+      &:nth-child(4) {
+        > svg {
+          width: 80px;
+        }
+      }
+    }
+  }
 `;
 
 const VectorArtWrapper = styled.div`
@@ -46,6 +60,14 @@ const VectorArtWrapper = styled.div`
     justify-content: flex-start;
     > svg {
       transform: scale(0.3);
+    }
+  }
+  @media ${device.mobileL} {
+    display: block;
+    justify-content: flex-start;
+    > svg {
+      transform: scale(0.5);
+      width: 100%;
     }
   }
 `;

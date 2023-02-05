@@ -7,7 +7,7 @@ import hand from "../../Constants/cursor";
 
 const StyledLink = styled.a`
   background: ${color.green};
-  width: 80px;
+  width: 100px;
   color: ${color.dark};
   text-decoration: none;
   font-family: ${fonts.secondary};

@@ -52,21 +52,121 @@ class MyDocument extends Document {
             name='description'
             content='Web site created using create-react-app'
           />
-          <link rel='apple-touch-icon' href='%PUBLIC_URL%/logo192.png' />
+          <meta name='mobile-web-app-capable' content='yes' />
+          <meta name='apple-mobile-web-app-capable' content='yes' />
+          <meta name='application-name' content="Shubham's portfolio" />
+          <meta
+            name='apple-mobile-web-app-title'
+            content="Shubham's portfolio"
+          />
+          <meta name='theme-color' content='#65dc98' />
+          <meta name='msapplication-navbutton-color' content='#65dc98' />
+          <meta
+            name='apple-mobile-web-app-status-bar-style'
+            content='black-translucent'
+          />
+          <meta name='msapplication-starturl' content='/' />
+          <meta
+            name='viewport'
+            content='width=device-width, initial-scale=1, shrink-to-fit=no'
+          />
+
+          <link
+            rel='icon'
+            type='image/png'
+            sizes='512x512'
+            href='/android-launchericon-512-512.png'
+          />
+          <link
+            rel='apple-touch-icon'
+            type='image/png'
+            sizes='512x512'
+            href='/android-launchericon-512-512.png'
+          />
+          <link
+            rel='icon'
+            type='image/png'
+            sizes='192x192'
+            href='/android-launchericon-192-192.png'
+          />
+          <link
+            rel='apple-touch-icon'
+            type='image/png'
+            sizes='192x192'
+            href='/android-launchericon-192-192.png'
+          />
+          <link
+            rel='icon'
+            type='image/png'
+            sizes='144x144'
+            href='/android-launchericon-144-144.png'
+          />
+          <link
+            rel='apple-touch-icon'
+            type='image/png'
+            sizes='144x144'
+            href='/android-launchericon-144-144.png'
+          />
+          <link
+            rel='icon'
+            type='image/png'
+            sizes='96x96'
+            href='/android-launchericon-96-96.png'
+          />
+          <link
+            rel='apple-touch-icon'
+            type='image/png'
+            sizes='96x96'
+            href='/android-launchericon-96-96.png'
+          />
+          <link
+            rel='icon'
+            type='image/png'
+            sizes='72x72'
+            href='/android-launchericon-72-72.png'
+          />
+          <link
+            rel='apple-touch-icon'
+            type='image/png'
+            sizes='72x72'
+            href='/android-launchericon-72-72.png'
+          />
+          <link
+            rel='icon'
+            type='image/png'
+            sizes='48x48'
+            href='/android-launchericon-48-48.png'
+          />
+          <link
+            rel='apple-touch-icon'
+            type='image/png'
+            sizes='48x48'
+            href='/android-launchericon-48-48.png'
+          />
+
+          <link
+            href='https://fonts.googleapis.com/css2?family=Jost:wght@600&family=Roboto:wght@300&display=swap'
+            rel='stylesheet'
+          />
+          <link
+            href='https://fonts.googleapis.com/css2?family=VT323&display=swap'
+            rel='stylesheet'
+          />
+          <link
+            href='https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap'
+            rel='stylesheet'
+          />
+          <script src='https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js'></script>
+          <meta
+            name='description'
+            content='Web site created using create-react-app'
+          />
+          <link rel='apple-touch-icon' href='/logo192.png' />
           {/* <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     --> */}
-          <link rel='manifest' href='%PUBLIC_URL%/manifest.json' />
-          {/* <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    --> */}
+          <link rel='manifest' href='/manifest.json' />
           {/* <style>
       .loader--hide {
         opacity: 0;
